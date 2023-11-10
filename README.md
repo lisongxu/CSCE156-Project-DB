@@ -229,23 +229,23 @@ You are welcome to demonstrate how your Jstgram works to our LAs, especially the
  
 ### 5.2 Grading by the instructor
 
-Write a report to study and compare the performance of different methods to retrieve the data from the database server to Java. 
+Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
-For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a single well-designed join select statement to directly retrieve these posts from the database server. Another method is to first use a select statement to retrieve the list of users whose posts are visible to the current user from the database server, and then use one or multiple select statements to retrieve their posts from the database. Both methods are fine for this porject, but they have different performance.    
+For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this porject, but they offer differing different performance levels.    
 
-* Points: Additional 60 bonus points
+* Points: Earn an additional up to 60 bonus points
   
-* Grading: Graded by the instructor.
+* Grading: The instructor will grade this report.
 
 * Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
   
-* Methods to study: Design and implement at least three different methods to retrieve the data from the database server to Java. 
+* Methods to study: Design and implement several different methods for data retrieval from the database server to Java. 
 
-* Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time for all your statements and/or the total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
+* Performance metrics: Investigate and identify methods to (automatically or manually) measure the total database runtime for all your statements and/or the total network traffic between the database server and your Java code. You may also consider other performance metrics, subject to instructor approval.
 
-* Dataset: Write code to initialize your database with a large number of randomly generated users, posts, and visibility settings.
+* Dataset: Develop code to populate your database with a given number of randomly generated users, posts, and visibility settings.
 
-* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, the number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful, do not overload the database server)
+* Experiments: Design and execute experiments to measure the aforementioned performance metrics while progressively increasing the database size. For example, vary the number of randomly generated users/posts varying from 10, to 1000, 100000, or more. Be cautious to avoid overloading the database server.
     
 
 ## Credit
