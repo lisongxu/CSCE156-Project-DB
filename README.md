@@ -49,21 +49,21 @@ Your MySQL initialization script should add the following information to the dat
 To simplify the project, your application only needs to support the text posts. User can publish text posts only (no text art posts as in Project 1).
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
-* Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
-* Bob posted "Yep" at 19:01:00 on October 12, 2023.
-* David posted "Fall break" at 09:00:00 on October 16, 2023
-* Alice posted "Lab due tonight?" at 23:30:00 on October 27, 2023
-* Crystal posted "No, it's due next week" at 23:35:00 on October 27, 2023
+  * Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
+  * Bob posted "Yep" at 19:01:00 on October 12, 2023.
+  * David posted "Fall break" at 09:00:00 on October 16, 2023
+  * Alice posted "Lab due tonight?" at 23:30:00 on October 27, 2023
+  * Crystal posted "No, it's due next week" at 23:35:00 on October 27, 2023
 
 ### 2.3 Post Visibility
 
 Users can control the visibility of thir posts. Posts are alwasy visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
-* Alice's posts are visible to Bob and Crystal
-* Bob's posts are visible to Alice and Crystal
-* Crystal's posts are visible to Alice
-* David's posts are not visible to other users.
+  * Alice's posts are visible to Bob and Crystal
+  * Bob's posts are visible to Alice and Crystal
+  * Crystal's posts are visible to Alice
+  * David's posts are not visible to other users.
 
   
 ## 3. Jstgram Windows
@@ -126,8 +126,8 @@ Note that, only a user already in the database can be added to the visibility li
 
 Design a database to capture the following information
 
-* User details: userID, username, password, visibility list, 
-* Post details: postID, postText, postTime, the user who published the post
+  * User details: userID, username, password, visibility list, 
+  * Post details: postID, postText, postTime, the user who published the post
 
 Feel free to add additional information as needed. Feel free to name your tables and attributes. If you plan to use natural join, ensure at least one common column between the two tables.
 
@@ -137,10 +137,10 @@ You will write the MySQL initizliation script from scratch. Name it `dbinit.sql`
 
 ***Recommendation***
 
-* Utilize `auto_increment` for primay keys to avoid keeping track of the largest integer in Java when inserting new rows.
-* Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are famaliar with.
-* For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
-* If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some commnon columns.
+  * Utilize `auto_increment` for primay keys to avoid keeping track of the largest integer in Java when inserting new rows.
+  * Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are famaliar with.
+  * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
+  * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some commnon columns.
 
 ### 4.2 Java code design
 
@@ -164,8 +164,8 @@ public class Database {
 ```
 
 ***Recommendation***
-* Add comprehensive comments for clarity
-* Adhere to good coding practices to be discussed in lab sessions by LAs.
+  * Add comprehensive comments for clarity
+  * Adhere to good coding practices to be discussed in lab sessions by LAs.
   
 
 ## 5. Grading and Submitting Your Project
@@ -177,8 +177,8 @@ Submit the following to Canvas (not CodePost).
 
 
 1. `Project2.zip`: A Zip file of all source code.
-* `dbinit.mysql` - the MySQL initilization script 
-* `Main.java`, `Database.java`, and all other Java source files.
+  * `dbinit.mysql` - the MySQL initilization script 
+  * `Main.java`, `Database.java`, and all other Java source files.
 
 2. `design.pdf`: Design document described in the next section.
 
