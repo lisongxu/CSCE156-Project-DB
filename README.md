@@ -8,26 +8,22 @@ at the [University of Nebraska-Lincoln](https://www.unl.edu).
 ## Overview
 
 ### Lab Objectives & Topics
-Following the lab, you should be able to:
-* Make a JDBC connection to a database server
+After completing this lab, you should be able to:
+* Establish a JDBC connection to a database server
 * Use JDBC to query and process a result set from a database server
-* Use JDBC to insert new data to or delete existing data from a database
-* Design 3NF database tables 
+* Use JDBC to insert new data into or delete existing data from a database
+* Design database tables in 3NF (Third Normal Form) 
 
 
 ### Peer Programming Pair-Up
 
-At the start of
-each project, you may find a team member by yourself or may be randomly paired up with another student by
-a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. If you prefer to work on this project by yourself, that is fine too.  Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. 
-
-If you plan to work with one other student for this project, please ***sign
+At the beginning of each project, you may find a team member on your own.  Please ***sign
 up for a group on Canvas*** (`People` then `Groups`), and only one member of your group needs to
 submit your project on Canvas.
 
 ## 1. Relation to Project 1
 
-This project is independent of Project 1, although both projects are about Jstgram. You do not need to use use your code from Project 1, and actually you are recommended not to use your code from Project 1 because they are very different.
+This project is independent of Project 1, although both projects develop Jstgram. You do not need to use use your code from Project 1. In fact it is recommendeded not to use your Project 1 code due to the significant differences between the projects.
 
 
 ## 2. Social Media Application - Jstgram
@@ -36,7 +32,7 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All the information should be stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL init code to initialize the database, such as creating all the tables and inserting the initial user and post data into these tables, before Jstgram starts.
+All information should be stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL init code to initialize the database, such as creating all the tables and inserting the initial user and post data into these tables, before Jstgram starts.
 
 ### 2.1 Users
 
@@ -189,8 +185,8 @@ submit your project on Canvas.
 
 2. Design document named `design.pdf`
 * Database: Justify that all your tables conform to 3NF.
-* Database: Plot the Entity-Relational (ER) Diagram to show all your database tables and their relations. May use the ER diagram generated using MySQL Workbench or free https://drawsql.app/.
-* Java: Plot the Unified Modelling Language (UMR) diagram to show all your java classes and their relations.
+* Database: Plot the Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
+* Java: Plot the Unified Modelling Language (UM) diagram to show all your java classes and their relations. May use the PlantUML plugin fo Eclipse to automatically generate an UML diagram from your Java code. 
 * Overall: Describe the mapping between database tables and Java classes. Specifically, for each database table, which Java class is used to store the data of the table?
 * Overall: Describe how you synchornize your Java data with database data. For example, when to load which data from the database to Java? when to save which data from Java to database?
 
