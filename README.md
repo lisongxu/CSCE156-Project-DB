@@ -12,7 +12,7 @@ Following the lab, you should be able to:
 * Make a JDBC connection to a database server
 * Use JDBC to query and process a result set from a database server
 * Use JDBC to insert new data to or delete existing data from a database
-* Design 3NF tables 
+* Design 3NF database tables 
 
 
 ### Peer Programming Pair-Up
@@ -21,7 +21,7 @@ At the start of
 each project, you may find a team member by yourself or may be randomly paired up with another student by
 a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. If you prefer to work on this project by yourself, that is fine too.  Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. 
 
-Note that only one student of each group needs to submit...
+If you work with another student, please first create your group on Canvas, and then only one of you needs to submit the project for grading.
 
 ## 1. Relation to Project 1
 
@@ -34,30 +34,33 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All the information is stored on the database server `cse-linux-01.unl.edu`. 
+All the information is stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL code to initialize the database, such as creating all the tables, and inserting the initial data into these tables.
 
 ### 2.1 Users
 
-To simplify the project, we assume that the database already has the information of a group of users, and your applicaion does not need to support adding or deleting users.  
+To simplify the project, your applicaion does not need to support adding or deleting users. Instead, please add a group of users into the database using your MySQL code when initizliing the database. 
 
-A user can log into the application using their unique username and password. 
+A user can log into Jstgram using their unique username and password. 
 
 Below we will consider an example where the database already has the information of a total of four users with usernames: Alice, Bob, Crystal, and David.
 
-
 ### 2.2 Posts
 
-A user can publish text posts. To simplify the project, we consider only the text posts. 
+To simplify the project, your application only needs to support the text posts.  That is, a user can publish only text posts.
 
-
-* Visibility control: A user can control to which users all the posts published by the user are visible.
+For our example, assume that the database alreay has the information of the following posts
+* Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
+* Bob posted "Yep" at 19:01:00 on October 12, 2023.
+* David posted "Fall break" at 09:00:00 on October 16, 2023
+* Alice posted "Lab due tonight?" at 23:30:00 on October 27, 2023
+* Crystal posted "No, it's due next week" at 23:35:00 on October 27, 2023
 
 
 ### 2.3 Post Visibility
 
-Suppose that currently the database has the following information
+A user can choose to which users the posts of the user are visible. Only these users can view the posts published by the user.
 
-* Alice's posts are visible to Bob and Crystal
+For our example, 
 * Bob's posts are visible to Alice and Crystal
 * Crystal's posts are visible to Alice
 * David's posts are visible no other users.
