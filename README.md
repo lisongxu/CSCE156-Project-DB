@@ -144,7 +144,7 @@ Make sure that your tables conform to the third normal form (3NF). That is, no g
 * Please use `auto_increment` for your primay key of a table so that you do not need to keep track of the current largest integer in your java code when inserting a new row.
 * Please use only `int`, `varchar(n)`, and `char(n)` data types that we have studied in the class.
 * For postTime (i.e., the date and time of a post), you may use `LocalDateTime.now()` to get current date and time in Java and convert it to a string using  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` and then save it as a string (e.g., `varchar(n)` or `char(n)`) in the database. 
-* If necessary, you may use the more flexible `on` clause for join select. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. 
+* If necessary, you may use the more flexible `on` clause for join select. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause can join two tables using two columns with different column names.
 
 ### 4.2 Java code design
 
@@ -161,13 +161,23 @@ Submit all Java source code in a zip file to Canvas (not CodePost). Our LAs will
 
 Note that, each group only need to submit.
 
-Design document
+Zip file
+* MySQL code
+* Java source code
 
+Design document
+* Justify that all your tables conform to 3NF.
+* Plot the Entity-Relational Diagram of your database
+* Plot UMR diagram of your java classes
+* Explain how you synchornize your application data with database data
 
 ### 5.2 Grading by LAs
 
-* (10 points)
-* (Bonus 10 points) Add the following features
+* (10 points) All test
+* (Bonus 10 points) user registation and delete
+* (Bonus 10 points) Comments and coding style
+* (Bonus 20 points) Like
+* (Bonus 100 points) Experimental study 
 
 ## Credit
 
