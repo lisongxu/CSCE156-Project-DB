@@ -199,31 +199,36 @@ submit your project on Canvas.
 
 2. Code (60 points): Point distributed as follows:
 
-* (10 points) Your MySQL initilization script can succssefully create the tables and insert the predefined information into the database
-* (10 points) Main Window: Your code shows the correct number of users in the *Main Window*. 
-* (10 points) Account Window: Your code correctly checks the username and password and then show the *Account Window*. 
-* (20 points) Post Window: Your code shows the correct list of posts for each user in the *Post Window*. A new post can be succesfylly published.
-* (20 points) Visibility Window: Your code shows the correct visibility list for each user in the *Visibility Window*. The visibility can be succesfully edited (i.e., add and delet users).  
+* MySQL initilization script (10 points): Succssefully create the tables and insert the predefined information into the database.
+* Main Window (10 points): Correct display the number of users. 
+* Account Window (10 points): Correctly check the username and password. 
+* Post Window (20 points): Correct post display and functionality for new posts.
+* Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
 3. Bonus points
-   
-   You are also welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.
-   
-* (Bonus 5 points) Create new accounts: A user can create a new account.  
-* (Bonus 5 points) Delete accounts: A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
-* (Bonus 10 points) Comments and coding style: Please attend the lab sessions for more information about grading comments and coding style.
-* (Bonus 20 points) Like posts:  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
+  
+* Create new accounts (Bonus 5 points): A user can create a new account.  
+* Delete accounts (Bonus 5 points): A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
+* Comments and coding style (Bonus 10 points): Please attend the lab sessions for more information about grading comments and coding style.
+* Like posts (Bonus 20 points):  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
+
+You are welcome to demonstrate how your Jstgram works to our LAs, and they can give you their feedbacks and grade your project.
+
  
 ### 5.2 Grading by the instructor
 
-This accounts for additional 60 bonus points, amd will be graded by the instructor.
+Study and compare the performance of different ways to synchronzize the Java data and database data. 
+
+* Points: Additional 60 bonus points
+* Grading: Graded by the instructor.
+
+* Methods to study: Design and implement several different ways to synchronzize the Java data and database data. 
+* Dataset: Write code to initialize your database to have a large number of randomly generated users, posts, and visibility settings.
+* Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
+* Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
+    
 
 Write and submit a separate pdf file `study.pdf` to design and conduct experiments and report and discuss your experiment results.
-* Initialize your database to have a large number of randomly generated users, posts, and visibility settings.
-* Explore and find methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
-* Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
-* Design and implement several different ways to synchronzize the Java data and database data. 
-    
 
 ## Credit
 
