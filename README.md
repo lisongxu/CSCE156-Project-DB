@@ -220,10 +220,9 @@ You are welcome to demonstrate how your Jstgram works to our LAs, and they can g
  
 ### 5.2 Grading by the instructor
 
-Write a report to study and compare the performance of different methods of synchronzing the Java data with database data. For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a well-designed join select statement to directly retrieve such a list of posts from the database. Another method is to use a select statement to first find the users whose posts are visible to the current user, and then use multiple select statements to retrieve their posts from the database. Both   
+Write a report to study and compare the performance of different methods of synchronzing the Java data with database data. 
 
-
-one way that keeps the whole database data is to retrieve all database data to Java and then query the data locally in Java without using any (join) select statements. One way that keeps the minimum amount of database data is to use select statements to retrieve the minimum amount of data   
+For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a single well-designed join select statement to directly retrieve these posts from the database. Another method is to first use a select statement to find the list of users whose posts are visible to the current user, and then use one or multiple select statements to retrieve their posts from the database. Both methods are fine for this porject, but they have different performance.    
 
 * Points: Additional 60 bonus points
   
