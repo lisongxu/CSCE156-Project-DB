@@ -180,14 +180,7 @@ Submit the following to Canvas (not CodePost).
 * `dbinit.mysql` - the MySQL initilization script 
 * `Main.java`, `Database.java`, and all other Java source files.
 
-2. `design.pdf`: Design document detailing:
-* Database design justification for 3NF compliance of all your database tables.
-* The Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
-* The Unified Modelling Language (UM) diagram to show all your Java classes and their relations. May use the PlantUML plugin for Eclipse to automatically generate an UML diagram from your Java code. 
-* Describe the mapping between database tables and Java classes. Specifically, for each database table, which Java class is used to store the data of the table?
-* Describe and justify how you synchornize your Java data with database data. For example, when to load which data from the database to Java? when to save which data from Java to database?
-
-***note that, many questions are open ended; clear descripotion and justications of your design choices are key.***
+2. `design.pdf`: Design document described in the next section.
 
 Again, if you plan to work with one other student for this project, please sign
 up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
@@ -195,17 +188,33 @@ submit your project on Canvas.
 
 ### 5.2 Grading by LAs
 
-1. Design Document (40 points): Points allocated evenly across required sections.
+1. Design Document (40 points)
 
-2. Code (60 points): Point distributed as follows:
+* ER Diagram (5 points) : The Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
+
+* UML Diagram (5 points) : The Unified Modelling Language (UM) diagram to show all your Java classes and their relations. May use the PlantUML plugin for Eclipse to automatically generate an UML diagram from your Java code. 
+
+* 3NF Complicance (10 points) : Database design justification for 3NF compliance of all your database tables.
+  
+* Mapping (10 points) : Describe the mapping between database tables and Java classes and briefly explain why. For example, which Java class is used to store the data of each table in the database?
+
+* Synchronization (10 points): Describe how you synchornize your Java data with database data and breifly explain why. For example, when to load which data from the database to Java? when to save which data from Java to database?
+
+***note that, the mapping and synchrinization questions are open ended; clear descripotion and justications of your design choices are key.***
+
+2. Code (60 points): 
 
 * MySQL initilization script (10 points): Succssefully create the tables and insert the predefined information into the database.
+  
 * Main Window (10 points): Correct display the number of users. 
+
 * Account Window (10 points): Correctly check the username and password. 
+
 * Post Window (20 points): Correct post display and functionality for new posts.
+
 * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
-3. Bonus points
+3. Bonus (35 points)
   
 * Create new accounts (Bonus 5 points): A user can create a new account.
   
@@ -215,7 +224,7 @@ submit your project on Canvas.
 
 * Like posts (Bonus 20 points):  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
 
-You are welcome to demonstrate how your Jstgram works to our LAs, and they can give you their feedbacks and grade your project.
+You are welcome to demonstrate how your Jstgram works to our LAs, especially the bonus parts, and they can give you their feedbacks and grade your project.
 
  
 ### 5.2 Grading by the instructor
@@ -223,19 +232,20 @@ You are welcome to demonstrate how your Jstgram works to our LAs, and they can g
 Write a report to study and compare the performance of different methods to retrieve the data from the database server to Java. 
 
 For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a single well-designed join select statement to directly retrieve these posts from the database server. Another method is to first use a select statement to retrieve the list of users whose posts are visible to the current user from the database server, and then use one or multiple select statements to retrieve their posts from the database. Both methods are fine for this porject, but they have different performance.    
+
 * Points: Additional 60 bonus points
   
 * Grading: Graded by the instructor.
 
 * Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
   
-* Methods to study: Design and implement several different ways to retrieve your project data from the database server to Java. 
+* Methods to study: Design and implement at least three different methods to retrieve the data from the database server to Java. 
 
 * Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time for all your statements and/or the total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
 
 * Dataset: Write code to initialize your database with a large number of randomly generated users, posts, and visibility settings.
 
-* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, the number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
+* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, the number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful, do not overload the database server)
     
 
 ## Credit
