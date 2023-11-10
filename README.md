@@ -141,10 +141,10 @@ Please add more information if necessary. Feel free to name your tables and attr
 Make sure that your tables conform to the third normal form (3NF). That is, no group of values for an attribute, no partial dependency, and no transitive dependency.
 
 ***Recommendation***
-* Please use *auto_increment* for your primay key of a table so that you do not need to keep track of the current largest integer in your java code.
+* Please use `auto_increment` for your primay key of a table so that you do not need to keep track of the current largest integer in your java code when inserting a new row.
 * Please use only `int`, `varchar(n)`, and `char(n)` data types that we have studied in the class.
 * For postTime (i.e., the date and time of a post), you may use `LocalDateTime.now()` to get current date and time in Java and convert it to a string using  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` and then save it as a string (e.g., `varchar(n)` or `char(n)`) in the database. 
-
+* If necessary, you may use the more flexible `on` clause for join select. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. 
 
 ### 4.2 Java code design
 
