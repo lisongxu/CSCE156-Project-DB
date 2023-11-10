@@ -95,10 +95,10 @@ The *Post Window* lists all posts by the current user and all posts visible to t
 Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with your MySQL script. Note that different users see different lists of posts.
 
 <p align="center">
-<img src="images/post_win_alice.png" alt="Post Window" width="30%"/>
-<img src="images/post_win_bob.png" alt="Post Window" width="30%"/>
-<img src="images/post_win_crystal.png" alt="Post Window" width="30%"/>
-<img src="images/post_win_david.png" alt="Post Window" width="30%"/>
+<img src="images/post_win_alice.png" alt="Post Window" width="40%"/>
+<img src="images/post_win_bob.png" alt="Post Window" width="40%"/>
+<img src="images/post_win_crystal.png" alt="Post Window" width="40%"/>
+<img src="images/post_win_david.png" alt="Post Window" width="40%"/>
 </p>  
 
 The current user can choose to publish a new post, or return back to the *Account Window*. If a new post is published, the database and the *Post Window* should be updated accordingly.
@@ -110,10 +110,10 @@ The *Visibility Window* shows the list of users who can see the posts of the cur
 Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, based on the database initialized with your MySQL script.
 
 <p align="center">
-<img src="images/visibility_win_alice.png" alt="Visibility Window" width="30%"/>
-<img src="images/visibility_win_bob.png" alt="Visibility Window" width="30%"/>
-<img src="images/visibility_win_crystal.png" alt="Visibility Window" width="30%"/>
-<img src="images/visibility_win_david.png" alt="Visibility Window" width="30%"/>
+<img src="images/visibility_win_alice.png" alt="Visibility Window" width="40%"/>
+<img src="images/visibility_win_bob.png" alt="Visibility Window" width="40%"/>
+<img src="images/visibility_win_crystal.png" alt="Visibility Window" width="40%"/>
+<img src="images/visibility_win_david.png" alt="Visibility Window" width="40%"/>
 </p>  
 
 The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, the database and the *Visibility Window* should be updated accordingly.
