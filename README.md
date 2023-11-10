@@ -30,26 +30,44 @@ This project is independent of Project 1, although both projects are about Jstgr
 
 ## 2. Social Media Application - Jstgram
 
+In this project, we will design and develop a database version for *Jstgram*. 
 
-In this project, we will design and develop a database version for *Jstgram*. It supports the following features
+### 2.1 Database
 
-* Post publishing: A user can publish text posts.
+All the information is stored on the database server `cse-linux-01.unl.edu`. 
+
+### 2.1 Users
+
+To simplify the project, we assume that the database already has the information of a group of users, and your applicaion does not need to support adding or deleting users.  
+
+A user can log into the application using their unique username and password. 
+
+Below we will consider an example where the database already has the information of a total of four users with usernames: Alice, Bob, Crystal, and David.
+
+
+### 2.2 Posts
+
+A user can publish text posts. To simplify the project, we consider only the text posts. 
+
+
 * Visibility control: A user can control to which users all the posts published by the user are visible.
 
-### 2.0 An Example of Users and Their Relations
+
+### 2.3 Post Visibility
 
 Suppose that currently the database has the following information
 
-* There are four users: Alice, Bob, Crystal, and David
 * Alice's posts are visible to Bob and Crystal
 * Bob's posts are visible to Alice and Crystal
 * Crystal's posts are visible to Alice
 * David's posts are visible no other users.
 
 Note that the posts of a user are alwasy visible to the user themself.
-  
 
-### 2.1 Main Window
+  
+## 3. Jstgram Windows
+
+### 3.1 Main Window
 
 When Jstgram starts, it should first connect to the database server and get the current number of users in the database. If successful, it displays that information in the *Main Window* as demonstrated below. 
 
@@ -59,7 +77,7 @@ When Jstgram starts, it should first connect to the database server and get the 
 
 It reads the username and password from the keyboard. If the username and password match with the information on the database, it goes to the *Account Window*.
 
-### 2.2 Account Window
+### 3.2 Account Window
 
 The *Account Window* is demonstrated below. 
 
@@ -69,7 +87,7 @@ The *Account Window* is demonstrated below.
  
 The user can choose to view the posts, edit visitibility setting, or quit the application.
 
-### 2.3 Post Window
+### 3.3 Post Window
 
 The *Post Window* lists all the posts by the current user and all the posts visible to the current user in the ascending order of the post times. 
 
@@ -79,7 +97,7 @@ The *Post Window* lists all the posts by the current user and all the posts visi
 
 The user can choose to publish a new post, or go back to the account window.
 
-### 2.4  Visibility Window
+### 3.4  Visibility Window
 
 The *Visibility Window* lists all the users to whom the posts of the current user are visible.
 
@@ -88,29 +106,29 @@ The *Visibility Window* lists all the users to whom the posts of the current use
 </p>  
 
 
-## 3. Project Requirement
+## 4. Project Requirement
 
 
-### 3.1 Database design
+### 4.1 Database design
 
 You are provided with the following fully completed classes
 
-### 3.2 Java code design
+### 4.2 Java code design
 
 * The . 
 
 
 
-## 4. Grading and Submitting Your Project
+## 5. Grading and Submitting Your Project
 
  
-### 4.1 Submitting to Canvas
+### 5.1 Submitting to Canvas
 
 Submit all Java source code in a zip file to Canvas (not CodePost). Our LAs will manually grade them. You are welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.  
 
 Note that, each group only need to submit.
 
-### 4.2 Grading by LAs
+### 5.2 Grading by LAs
 
 * (10 points)
 * (Bonus 10 points) Add the following features
