@@ -32,22 +32,22 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All information should be stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL init code to initialize the database, such as creating all the tables and inserting the initial user and post data into these tables, before Jstgram starts.
+All information should be stored on the database server `cse-linux-01.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting initial user and post data as specified below, before Jstgram starts.
 
 ### 2.1 Users
 
-To simplify the project, your applicaion does not need to support adding or deleting users. Instead, please add a group of users into the database in your MySQL init code. 
+To simplify the project, your applicaion does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users into the database. 
 
 A user can log into Jstgram using their unique username and password. 
 
-Your MySQL init code should add the following information into the database before Jstgram starts.
-*  a total of four users with usernames: Alice, Bob, Crystal, and David, and their passwords: Alice123, Bob123, Crystal123, David123, respectively.
+Your MySQL initialization script should add the following information to the database before Jstgram starts.
+*  Four users with usernames: Alice, Bob, Crystal, and David, and their respective passwords: Alice123, Bob123, Crystal123, David123.
 
 ### 2.2 Posts
 
-To simplify the project, your application only needs to support the text posts.  That is, a user can publish only text posts (no more text arts in project 1).
+To simplify the project, your application only needs to support the text posts. User can publish text posts only (no text art posts as in Project 1).
 
-Your MySQL init code should add the following information into the database before Jstgram starts.
+Your MySQL initialization script should add the following information to the database before Jstgram starts.
 * Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
 * Bob posted "Yep" at 19:01:00 on October 12, 2023.
 * David posted "Fall break" at 09:00:00 on October 16, 2023
@@ -56,43 +56,42 @@ Your MySQL init code should add the following information into the database befo
 
 ### 2.3 Post Visibility
 
-A user can choose to which users the posts of the user are visible. Only these users can view the posts published by the user.
-Note that the posts of a user are always visible to themself.
+Users can control the visibility of thir posts. Posts are alwasy visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
 
-Your MySQL init code should add the following information into the database before Jstgram starts.
+Your MySQL initialization script should add the following information to the database before Jstgram starts.
 * Alice's posts are visible to Bob and Crystal
 * Bob's posts are visible to Alice and Crystal
 * Crystal's posts are visible to Alice
-* David's posts are visible to no other users.
+* David's posts are not visible to other users.
 
   
 ## 3. Jstgram Windows
 
 ### 3.1 Main Window
 
-When Jstgram starts, it should first connect to the database server and get the current number of users in the database (i.e., the users already added by your MySQL init code). If successful, it displays that information in the *Main Window* as demonstrated below. 
+When Jstgram starts, it should first connect to the database server and retrieve the current number of users in the database (as added by your MySQL initialization script). If successful, it displays that information in the *Main Window* as shown below. 
 
 <p align="center">
 <img src="images/main_win.png" alt="Main Window" width="40%"/>
 </p>  
 
-It then reads the username and password from the keyboard. If the username and password match with the information in the database, this user becomes the current user and Jstgram goes to the *Account Window*.
+It then prompts for the username and password. If these credentials match the information in the database, this user becomes the current user, and Jstgram proceeds to the *Account Window*.
 
 ### 3.2 Account Window
 
-The *Account Window* is demonstrated below for Alice. 
+The *Account Window* for Alice is shown belown as an example. 
 
 <p align="center">
 <img src="images/account_win.png" alt="Account Window" width="40%"/>
 </p>  
  
-The current user can choose to view the posts, edit post visibility, or quit the application.
+The current user can choose to view posts, edit post visibility, or quit the application.
 
 ### 3.3 Post Window
 
-The *Post Window* lists all the posts by the current user and all the posts visible to the current user in the *ascending* order of the post times. 
+The *Post Window* lists all posts by the current user and all posts visible to them, in the *ascending* order of post times. 
 
-For the database initizlized using your MySQL init code, below are the *Post Window* for Alice, Bob, Crystal, and David, respectively. Note that the *Post Window* shows different lists of posts to these users. 
+Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with your MySQL script. Note that different users see different lists of posts.
 
 <p align="center">
 <img src="images/post_win_alice.png" alt="Post Window" width="30%"/>
@@ -101,15 +100,13 @@ For the database initizlized using your MySQL init code, below are the *Post Win
 <img src="images/post_win_david.png" alt="Post Window" width="30%"/>
 </p>  
 
-The current user can choose to publish a new post, or go back to the account window.
-
-If publishing a new post, the database should be updated and the post window should also be updated.
+The current user can choose to publish a new post, or return back to the *Account Window*. If a new post is published, the database and the *Post Window* should be updated accordingly.
 
 ### 3.4  Visibility Window
 
-The *Visibility Window* lists all the users to whom the posts of the current user are visible.
+The *Visibility Window* shows the list of users who can see the posts of the current user.
 
-For the database initizlized using your MySQL init code, below are the *Visibility Window* for Alice, Bob, Crystal, and David, respectively. 
+Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, based on the database initialized with your MySQL script.
 
 <p align="center">
 <img src="images/visiblity_win_alice.png" alt="Visibility Window" width="30%"/>
