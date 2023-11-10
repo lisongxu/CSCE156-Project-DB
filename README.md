@@ -36,7 +36,17 @@ In this project, we will design and develop a database version for *Jstgram*. It
 * Post publishing: A user can publish text posts.
 * Visibility control: A user can control to which users all the posts published by the user are visible.
 
-### 2.0 Example 
+### 2.0 An Example of Users and Their Relations
+
+Suppose that currently the database has the following information
+
+* There are four users: Alice, Bob, Crystal, and David
+* Alice's posts are visible to Bob and Crystal
+* Bob's posts are visible to Alice and Crystal
+* Crystal's posts are visible to Alice
+* David's posts are visible no other users.
+
+Note that the posts of a user are alwasy visible to the user themself.
   
 
 ### 2.1 Main Window
