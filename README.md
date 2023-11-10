@@ -220,26 +220,23 @@ You are welcome to demonstrate how your Jstgram works to our LAs, and they can g
  
 ### 5.2 Grading by the instructor
 
-Write a report to study and compare the performance of different methods of synchronzing the Java data with database data. 
+Write a report to study and compare the performance of different methods to retrieve the data from the database server to Java. 
 
-For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a single well-designed join select statement to directly retrieve these posts from the database. Another method is to first use a select statement to find the list of users whose posts are visible to the current user, and then use one or multiple select statements to retrieve their posts from the database. Both methods are fine for this porject, but they have different performance.    
-
+For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a single well-designed join select statement to directly retrieve these posts from the database server. Another method is to first use a select statement to retrieve the list of users whose posts are visible to the current user from the database server, and then use one or multiple select statements to retrieve their posts from the database. Both methods are fine for this porject, but they have different performance.    
 * Points: Additional 60 bonus points
   
 * Grading: Graded by the instructor.
 
 * Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
   
-* Methods to study: Design and implement several different ways to synchronzize the Java data and database data. 
+* Methods to study: Design and implement several different ways to retrieve your project data from the database server to Java. 
 
-* Dataset: Write code to initialize your database to have a large number of randomly generated users, posts, and visibility settings.
+* Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time for all your statements and/or the total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
 
-* Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
+* Dataset: Write code to initialize your database with a large number of randomly generated users, posts, and visibility settings.
 
-* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
+* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, the number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
     
-
-Write and submit a separate pdf file `study.pdf` to design and conduct experiments and report and discuss your experiment results.
 
 ## Credit
 
