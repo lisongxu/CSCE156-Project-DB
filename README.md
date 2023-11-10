@@ -106,6 +106,8 @@ For the example mentioned above, below are the *Post Window* for Alice, Bob, Cry
 
 The current user can choose to publish a new post, or go back to the account window.
 
+If publishing a new post, the database should be updated and the post window should be updated.
+
 ### 3.4  Visibility Window
 
 The *Visibility Window* lists all the users to whom the posts of the current user are visible.
@@ -119,6 +121,11 @@ For the example mentioned above, below are the *Visibility Window* for Alice, Bo
 <img src="images/visiblity_win_david.png" alt="Visibility Window" width="30%"/>
 </p>  
 
+The current user can choose to add a user to the visibility list, , delete a user from the visibility list, or go back to the account window.
+
+If adding or deleting a user, the database should be updated and the *Visibility Window* should be updated.
+
+Note that, only a user already in the database can be added to the visibility list, and only a user already in the visibility list can be deleted from the visibility list.
 
 
 ## 4. Project Requirement
