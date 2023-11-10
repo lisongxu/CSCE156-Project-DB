@@ -207,9 +207,12 @@ submit your project on Canvas.
 
 3. Bonus points
   
-* Create new accounts (Bonus 5 points): A user can create a new account.  
+* Create new accounts (Bonus 5 points): A user can create a new account.
+  
 * Delete accounts (Bonus 5 points): A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
-* Comments and coding style (Bonus 10 points): Please attend the lab sessions for more information about grading comments and coding style.
+
+* Comments and coding style (Bonus 5 points): Please attend the lab sessions for more information about grading comments and coding style.
+
 * Like posts (Bonus 20 points):  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
 
 You are welcome to demonstrate how your Jstgram works to our LAs, and they can give you their feedbacks and grade your project.
@@ -217,15 +220,24 @@ You are welcome to demonstrate how your Jstgram works to our LAs, and they can g
  
 ### 5.2 Grading by the instructor
 
-Study and compare the performance of different ways to synchronzize the Java data and database data. 
+Write a report to study and compare the performance of different methods of synchronzing the Java data with database data. For example, let's consider the list of posts shown in the *Post Window*, which includes all posts published by the current user and all posts visible to the current user. One method is to use a well-designed join select statement to directly retrieve such a list of posts from the database. Another method is to use a select statement to first find the users whose posts are visible to the current user, and then use multiple select statements to retrieve their posts from the database. Both   
+
+
+one way that keeps the whole database data is to retrieve all database data to Java and then query the data locally in Java without using any (join) select statements. One way that keeps the minimum amount of database data is to use select statements to retrieve the minimum amount of data   
 
 * Points: Additional 60 bonus points
+  
 * Grading: Graded by the instructor.
 
+* Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
+  
 * Methods to study: Design and implement several different ways to synchronzize the Java data and database data. 
+
 * Dataset: Write code to initialize your database to have a large number of randomly generated users, posts, and visibility settings.
+
 * Performance metrics: Explore and find measurement methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
-* Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
+
+* Experiments: Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
     
 
 Write and submit a separate pdf file `study.pdf` to design and conduct experiments and report and discuss your experiment results.
