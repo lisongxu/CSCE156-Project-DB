@@ -200,7 +200,7 @@ submit your project on Canvas.
 
 * Synchronization (10 points): Describe how you synchornize your Java data with database data and breifly explain why. For example, when to load which data from the database to Java? when to save which data from Java to database?
 
-***note that, the mapping and synchrinization questions are open ended; clear descripotion and justications of your design choices are key.***
+Note that, the mapping and synchrinization questions are open ended; clear descripotion and justications of your design choices are key.
 
 2. Code (60 points): 
 
@@ -227,7 +227,7 @@ submit your project on Canvas.
 You are welcome to demonstrate how your Jstgram works to our LAs, especially the bonus parts, and they can give you their feedbacks and grade your project.
 
  
-### 5.2 Grading by the instructor
+### 5.3 Grading by the instructor
 
 Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
