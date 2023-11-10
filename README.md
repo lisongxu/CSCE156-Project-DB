@@ -110,10 +110,10 @@ The *Visibility Window* shows the list of users who can see the posts of the cur
 Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, based on the database initialized with your MySQL script.
 
 <p align="center">
-<img src="images/visiblity_win_alice.png" alt="Visibility Window" width="30%"/>
-<img src="images/visiblity_win_bob.png" alt="Visibility Window" width="30%"/>
-<img src="images/visiblity_win_crystal.png" alt="Visibility Window" width="30%"/>
-<img src="images/visiblity_win_david.png" alt="Visibility Window" width="30%"/>
+<img src="images/visibility_win_alice.png" alt="Visibility Window" width="30%"/>
+<img src="images/visibility_win_bob.png" alt="Visibility Window" width="30%"/>
+<img src="images/visibility_win_crystal.png" alt="Visibility Window" width="30%"/>
+<img src="images/visibility_win_david.png" alt="Visibility Window" width="30%"/>
 </p>  
 
 The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, the database and the *Visibility Window* should be updated accordingly.
