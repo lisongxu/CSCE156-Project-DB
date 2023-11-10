@@ -190,42 +190,42 @@ submit your project on Canvas.
 
 1. Design Document (40 points)
 
-* ER Diagram (5 points) : The Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
+  * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for automatic generation of an ER Digram from your MySQL code. 
 
-* UML Diagram (5 points) : The Unified Modelling Language (UM) diagram to show all your Java classes and their relations. May use the PlantUML plugin for Eclipse to automatically generate an UML diagram from your Java code. 
+  * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The PlantUML plugin for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
-* 3NF Complicance (10 points) : Database design justification for 3NF compliance of all your database tables.
+  * 3NF Complicance (10 points) : Provide a justification for 3NF compliance of all your database tables.
   
-* Mapping (10 points) : Describe the mapping between database tables and Java classes and briefly explain why. For example, which Java class is used to store the data of each table in the database?
+  * Mapping (10 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
 
-* Synchronization (10 points): Describe how you synchornize your Java data with database data and breifly explain why. For example, when to load which data from the database to Java? when to save which data from Java to database?
+  * Synchronization (10 points): Describe how you synchornize your Java data with the data on the database server, along with a breifly justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-Note that, the mapping and synchrinization questions are open ended; clear descripotion and justications of your design choices are key.
+Note: the mapping and synchrinization questions are open-ended; a clear descripotion and justication of your design choices are crucial.
 
 2. Code (60 points): 
 
-* MySQL initilization script (10 points): Succssefully create the tables and insert the predefined information into the database.
+  * MySQL Initilization Script (10 points): Succssefully create the tables and insert the predefined data into the database.
   
-* Main Window (10 points): Correct display the number of users. 
+  * Main Window (10 points): Correctly display the current number of users. 
 
-* Account Window (10 points): Correctly check the username and password. 
+  * Account Window (10 points): Correctly validate the username and password before entering the Account Window. 
 
-* Post Window (20 points): Correct post display and functionality for new posts.
+  * Post Window (20 points): Correct post display and functionality for new posts.
 
-* Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
+  * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
 3. Bonus (35 points)
   
-* Create new accounts (Bonus 5 points): A user can create a new account.
+  * Create New Accounts (Bonus 5 points): Enable users to create new accounts.
   
-* Delete accounts (Bonus 5 points): A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
+  * Delete Accounts (Bonus 5 points): Allow users to delete their current account. Ensure complete removal of user data, including username, password, visibility, and posts, from the database in the correct sequence.  
 
-* Comments and coding style (Bonus 5 points): Please attend the lab sessions for more information about grading comments and coding style.
+  * Comments and Coding Style (Bonus 5 points): Attend lab sessions for detailed grading criteria on comments and coding style.
 
-* Like posts (Bonus 20 points):  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
+  * Like Posts (Bonus 20 points):  Permit users to like posts visible to them. The like information should be accessible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
-You are welcome to demonstrate how your Jstgram works to our LAs, especially the bonus parts, and they can give you their feedbacks and grade your project.
-
+  
+You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
  
 ### 5.3 Grading by the instructor
 
@@ -233,19 +233,19 @@ Write a report to study and compare the performance of various data retrieval me
 
 For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this porject, but they offer differing different performance levels.    
 
-* Points: Earn an additional up to 60 bonus points
+  * Points: Earn an additional up to 60 bonus points
   
-* Grading: The instructor will grade this report.
+  * Grading: The instructor will grade this report.
 
-* Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
+  * Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
   
-* Methods to study: Design and implement several different methods for data retrieval from the database server to Java. 
+  * Methods to study: Design and implement several different methods for data retrieval from the database server to Java. 
 
-* Performance metrics: Investigate and identify methods to (automatically or manually) measure the total database runtime for all your statements and/or the total network traffic between the database server and your Java code. You may also consider other performance metrics, subject to instructor approval.
+  * Performance metrics: Investigate and identify methods to (automatically or manually) measure the total database runtime for all your statements and/or the total network traffic between the database server and your Java code. You may also consider other performance metrics, subject to instructor approval.
 
-* Dataset: Develop code to populate your database with a given number of randomly generated users, posts, and visibility settings.
+  * Dataset: Develop code to populate your database with a given number of randomly generated users, posts, and visibility settings.
 
-* Experiments: Design and execute experiments to measure the aforementioned performance metrics while progressively increasing the database size. For example, vary the number of randomly generated users/posts varying from 10, to 1000, 100000, or more. Be cautious to avoid overloading the database server.
+  * Experiments: Design and execute experiments to measure the aforementioned performance metrics while progressively increasing the database size. For example, vary the number of randomly generated users/posts varying from 10, to 1000, 100000, or more. Be cautious to avoid overloading the database server.
     
 
 ## Credit
