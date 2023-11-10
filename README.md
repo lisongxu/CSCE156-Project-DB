@@ -93,7 +93,7 @@ The current user can choose to view the posts, edit visibility, or quit the appl
 
 ### 3.3 Post Window
 
-The *Post Window* lists all the posts by the current user and all the posts visible to the current user in the ascending order of the post times. 
+The *Post Window* lists all the posts by the current user and all the posts visible to the current user in the *ascending* order of the post times. 
 
 For the example mentioned above, below are the *Post Window* for Alice, Bob, Crystal, and David, respectively. Note that the *Post Window* shows different lists of posts to these users. 
 
@@ -133,7 +133,16 @@ Note that, only a user already in the database can be added to the visibility li
 
 ### 4.1 Database design
 
-You are provided with the following fully completed classes
+Use the methods that we studied about relational database to design a database to describe the following information
+* each user: userID, username, password, visibility list, 
+* each post: postID, postText, postTime, the user who published this post
+Please add more information if necessary. Feel free to name your tables and attributes. Make sure that two tables should at least one common column if you plan to join these two tables using natual join.
+
+Make sure that your tables conform to the third normal form (3NF). That is, no group of values for an attribute, no partial dependency, and no transitive dependency.
+
+
+postTime
+
 
 ### 4.2 Java code design
 
@@ -149,6 +158,9 @@ You are provided with the following fully completed classes
 Submit all Java source code in a zip file to Canvas (not CodePost). Our LAs will manually grade them. You are welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.  
 
 Note that, each group only need to submit.
+
+Design document
+
 
 ### 5.2 Grading by LAs
 
