@@ -188,7 +188,7 @@ submit your project on Canvas.
 
 ### 5.2 Grading by LAs
 
-1. Design Document (40 points)
+#### 5.2.1. Design Document (40 points)
 
   * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for automatic generation of an ER Digram from your MySQL code. 
 
@@ -202,7 +202,7 @@ submit your project on Canvas.
 
 Note: the mapping and synchrinization questions are open-ended; a clear descripotion and justication of your design choices are crucial.
 
-2. Code (60 points): 
+#### 5.2.2. Code (60 points): 
 
   * MySQL Initilization Script (10 points): Succssefully create the tables and insert the predefined data into the database.
   
@@ -214,7 +214,7 @@ Note: the mapping and synchrinization questions are open-ended; a clear descripo
 
   * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
-3. Bonus (35 points)
+#### 5.2.3. Bonus (35 points)
   
   * Create New Accounts (Bonus 5 points): Enable users to create new accounts.
   
@@ -227,7 +227,7 @@ Note: the mapping and synchrinization questions are open-ended; a clear descripo
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
  
-### 5.3 Grading by the instructor
+### 5.3 Grading by the instructor (Additional bonus points)
 
 Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
