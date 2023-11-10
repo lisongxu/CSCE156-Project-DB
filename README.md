@@ -34,7 +34,7 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All the information is stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL code to initialize the database, such as creating all the tables, and inserting the initial data into these tables.
+All the information is stored on the database server `cse-linux-01.unl.edu`. Please write an MySQL code to initialize the database, such as creating all the tables, and inserting the initial user and post data into these tables.
 
 ### 2.1 Users
 
@@ -42,13 +42,14 @@ To simplify the project, your applicaion does not need to support adding or dele
 
 A user can log into Jstgram using their unique username and password. 
 
-Below we will consider an example where the database already has the information of a total of four users with usernames: Alice, Bob, Crystal, and David.
+In this project, we will consider the example where the database already has the following information
+*  a total of four users with usernames: Alice, Bob, Crystal, and David, and their passwords.
 
 ### 2.2 Posts
 
 To simplify the project, your application only needs to support the text posts.  That is, a user can publish only text posts.
 
-For our example, assume that the database alreay has the information of the following posts
+In this project, we will consider the example where the database alreay has the following information
 * Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
 * Bob posted "Yep" at 19:01:00 on October 12, 2023.
 * David posted "Fall break" at 09:00:00 on October 16, 2023
@@ -59,13 +60,13 @@ For our example, assume that the database alreay has the information of the foll
 ### 2.3 Post Visibility
 
 A user can choose to which users the posts of the user are visible. Only these users can view the posts published by the user.
+Note that the posts of a user are always visible to the user themself.
 
-For our example, 
+In this project, we will consider the example where the database alreay has the following information
+* Alice's posts are visible to Bob and Crystal
 * Bob's posts are visible to Alice and Crystal
 * Crystal's posts are visible to Alice
-* David's posts are visible no other users.
-
-Note that the posts of a user are alwasy visible to the user themself.
+* David's posts are visible to no other users.
 
   
 ## 3. Jstgram Windows
@@ -78,35 +79,46 @@ When Jstgram starts, it should first connect to the database server and get the 
 <img src="images/main_win.png" alt="Main Window" width="40%"/>
 </p>  
 
-It reads the username and password from the keyboard. If the username and password match with the information on the database, it goes to the *Account Window*.
+It then reads the username and password from the keyboard. If the username and password match with the information in the database, thus user becomes the current user and Jstgram goes to the *Account Window*.
 
 ### 3.2 Account Window
 
-The *Account Window* is demonstrated below. 
+The *Account Window* is demonstrated below for Alice. 
 
 <p align="center">
 <img src="images/account_win.png" alt="Account Window" width="40%"/>
 </p>  
  
-The user can choose to view the posts, edit visitibility setting, or quit the application.
+The current user can choose to view the posts, edit visibility, or quit the application.
 
 ### 3.3 Post Window
 
 The *Post Window* lists all the posts by the current user and all the posts visible to the current user in the ascending order of the post times. 
 
+For the example mentioned above, below are the *Post Window* for Alice, Bob, Crystal, and David, respectively. Note that the *Post Window* shows different lists of posts to these users. 
+
 <p align="center">
 <img src="images/post_win_alice.png" alt="Post Window" width="30%"/>
+<img src="images/post_win_bob.png" alt="Post Window" width="30%"/>
+<img src="images/post_win_crystal.png" alt="Post Window" width="30%"/>
+<img src="images/post_win_david.png" alt="Post Window" width="30%"/>
 </p>  
 
-The user can choose to publish a new post, or go back to the account window.
+The current user can choose to publish a new post, or go back to the account window.
 
 ### 3.4  Visibility Window
 
 The *Visibility Window* lists all the users to whom the posts of the current user are visible.
 
+For the example mentioned above, below are the *Visibility Window* for Alice, Bob, Crystal, and David, respectively. 
+
 <p align="center">
-<img src="images/visivility_win.png" alt="Visibility Window" width="30%"/>
+<img src="images/visiblity_win_alice.png" alt="Visibility Window" width="30%"/>
+<img src="images/visiblity_win_bob.png" alt="Visibility Window" width="30%"/>
+<img src="images/visiblity_win_crystal.png" alt="Visibility Window" width="30%"/>
+<img src="images/visiblity_win_david.png" alt="Visibility Window" width="30%"/>
 </p>  
+
 
 
 ## 4. Project Requirement
