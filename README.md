@@ -1,13 +1,14 @@
 # Computer Science II
 ## Project - Database
 
-This is a project used in Computer Science II (CSCE 156) for Fall 2023 
+This project is part of  Computer Science II (CSCE 156) for Fall 2023 
 in the [School of Computing](https://computing.unl.edu) 
 at the [University of Nebraska-Lincoln](https://www.unl.edu).
 
 ## Overview
 
 ### Lab Objectives & Topics
+
 After completing this lab, you should be able to:
 * Establish a JDBC connection to a database server
 * Use JDBC to query and process a result set from a database server
@@ -115,37 +116,39 @@ Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, 
 <img src="images/visiblity_win_david.png" alt="Visibility Window" width="30%"/>
 </p>  
 
-The current user can choose to add a user to their visibility list, , delete a user from their visibility list, or go back to the account window.
-
-If adding or deleting a user, the database should be updated and the *Visibility Window* should also be updated.
+The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, the database and the *Visibility Window* should be updated accordingly.
 
 Note that, only a user already in the database can be added to the visibility list, and only a user already in the visibility list can be deleted from the visibility list.
 
 ## 4. Project Requirement
 
-
 ### 4.1 Database design
 
-Use the methods that we studied about relational database to design a database to describe the following information
-* each user: userID, username, password, visibility list, 
-* each post: postID, postText, postTime, the user who published this post
-Please add more information if necessary. Feel free to name your tables and attributes. Make sure that two tables have at least one common column if you plan to join these two tables using natual join.
+Design a database to capture the following information
 
-Make sure that your tables conform to the third normal form (3NF). That is, no group of values for an attribute, no partial dependency, and no transitive dependency.
+* User details: userID, username, password, visibility list, 
+* Post details: postID, postText, postTime, the user who published the post
+
+Feel free to add additional information as needed. Feel free to name your tables and attributes. If you plan to use natural join, ensure at least one common column between the two tables.
+
+Your tables must adhere to the third normal form (3NF), meaning they should have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
+
+You will write the MySQL initizliation script from scratch. Name it `dbinit.sql`.
 
 ***Recommendation***
-* Please use `auto_increment` for your primay key of a table so that you do not need to keep track of the current largest integer in your java code when inserting a new row.
-* Please use only `int`, `varchar(n)`, and `char(n)` data types that we have studied in the class.
-* For postTime (i.e., the date and time of a post), you may use `LocalDateTime.now()` to get current date and time in Java and convert it to a string using  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` and then save it as a string (e.g., `varchar(n)` or `char(n)`) in the database. 
-* If necessary, you may use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is mor flexible because it can join two tables using two columns even with different column names or using only some but not all commnon columns.
+
+* Utilize `auto_increment` for primay keys to avoid keeping track of the largest integer in Java when inserting new rows.
+* Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are famaliar with.
+* For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
+* If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some commnon columns.
 
 ### 4.2 Java code design
 
-Your Java program must correctly show all the necessary information in each window (e.g., list of posts in the *Post Window*), although you does not need to follow the same window formats as demonstrated above (e.g., the borders of a window, the width of a line).
+Write your Java program to correctly show the necessary information in each window (e.g., list of posts in the *Post Window*). The exact format of the windows can differ from the provided screenshots.
 
-No code is provided to you for this project, so you have to write all the code for this project from scratch. Please define appropriate classes for your project
-* The main class should be named `Main.java`, so that it is easier for our LAs to run your code
-* The information of hostname, database username, and database password should be saved as `public final static String` in the `Database` class, so that it is easier for our LAs to modify these information. Because our LAs will change the database username and password to their information before runing and grading your code.
+You will write all code from scratch. Define appropriate Java classes, such as 
+* `Main.java' as the main class for ease of execution by LAs
+* `Database.java` containing database connection details as `public final static String` for easy modification by LAs.
 
 ```Java
 public class Database {
@@ -161,22 +164,19 @@ public class Database {
 ```
 
 ***Recommendation***
-* Please add as more comments in your code as possible to help our LAs to understand your code
-* Please follow good coding style also to help our LAs to understand your code. ***Our LAs will talk about good coding styles in the lab sessions***.
-
+* Add comprehensive comments for clarity
+* Adhere to good coding practices to be discussed in lab sessions by LAs.
+  
 
 ## 5. Grading and Submitting Your Project
 
  
 ### 5.1 Submitting to Canvas
 
-Please submit the following files to Canvas (not CodePost).Our LAs will manually grade them. You are welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.  
+Submit the following to Canvas (not CodePost). 
 
-Again, if you plan to work with one other student for this project, please sign
-up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
-submit your project on Canvas.
 
-1. A Zip file of all your source code named `Project2.zip`
+1. `Project2.zip`: A Zip file of all source code.
 * the MySQL init code named `dbinit.mysql`
 * Java source files: The main class named `Main.java`, the database class named `Database.java`, and all other Java source files.
 
@@ -189,24 +189,41 @@ submit your project on Canvas.
 
 ***note that, many of the above questions are open ended. That is, there are multiple possible correct solutions. We are looking for your clear descripotion and brief justication of your design choice.***
 
+Again, if you plan to work with one other student for this project, please sign
+up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
+submit your project on Canvas.
+
 ### 5.2 Grading by LAs
 
-* (50 points) Grading your design document. Same points for each bullten point in the design document.
-* (50 points) Grading your code
-   * (10 points) Main Window: Your code shows the correct *Main Window* (information not the format). 
-   * (10 points) Account Window: Your code correctly checks the username and password and then show the *Account Window*. 
-   * (20 points) Post Window: Your code shows the correct list of posts for each user in the *Post Window*. A new post can be succesfylly published.
-   * (20 points) Visibility Window: Your code shows the correct visibility list for each user in the *Visibility Window*. The visibility can be succesfully edited (i.e., add and delet users).  
-* (Bonus points) 
-  * (Bonus 5 points) Create new accounts: A user can create a new account.  
-  * (Bonus 5 points) Delete accounts: A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
-  * (Bonus 10 points) Comments and coding style: Please attend the lab sessions for more information about grading comments and coding style.
-  * (Bonus 20 points) Like posts:  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF. 
-  * (Bonus 60 points) Experimental study: Write a separate pdf file `study.pdf` to design and conduct experiments and report and discuss your experiment results.
-        * Initialize your database to have a large number of randomly generated users, posts, and visibility settings.
-        * Explore and find methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
-        * Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
-        * Design and implement several different ways to synchronzize the Java data and database data. 
+1. (40 points) Design Document
+   
+* Same points for each bulliten point required for the design document.
+
+2. (60%) Your code
+
+* (10 points) Your MySQL initilization script can succssefully create the tables and insert the predefined information into the database
+* (10 points) Main Window: Your code shows the correct number of users in the *Main Window*. 
+* (10 points) Account Window: Your code correctly checks the username and password and then show the *Account Window*. 
+* (20 points) Post Window: Your code shows the correct list of posts for each user in the *Post Window*. A new post can be succesfylly published.
+* (20 points) Visibility Window: Your code shows the correct visibility list for each user in the *Visibility Window*. The visibility can be succesfully edited (i.e., add and delet users).  
+
+3. Bonus points
+   You are also welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.
+   
+* (Bonus 5 points) Create new accounts: A user can create a new account.  
+* (Bonus 5 points) Delete accounts: A user can successfully delete the current account. All the data of the user, such as username, password, visibility (the user and others), and posts, should be deleted from the database. Note that the data should be deleted from various tables in the correct order.  
+* (Bonus 10 points) Comments and coding style: Please attend the lab sessions for more information about grading comments and coding style.
+* (Bonus 20 points) Like posts:  A user may like a post visible to the user. The like information of a post should be visible to all the users who can view the post. Please design a new table or add a new attribue to existing tables, and make sure your tables still confirm to 3NF.
+ 
+### 5.2 Grading by the instructor
+
+This accounts for additional 60 bonus points, amd will be graded by the instructor.
+
+Write and submit a separate pdf file `study.pdf` to design and conduct experiments and report and discuss your experiment results.
+* Initialize your database to have a large number of randomly generated users, posts, and visibility settings.
+* Explore and find methods to (automatically or manually) measure the total database running time and/or total amount of network traffic between the database server and your Java code, and/or other performance metrics confirmed by the instructor.
+* Design and conduct experiments to measure the above performance metrics as you increasing the database size, for example, number of randomly generated users/posts varying from 10, to 1000, 100000, or more (be careful not overloading the database server)
+* Design and implement several different ways to synchronzize the Java data and database data. 
     
 
 ## Credit
