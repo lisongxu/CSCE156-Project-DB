@@ -177,17 +177,17 @@ Submit the following to Canvas (not CodePost).
 
 
 1. `Project2.zip`: A Zip file of all source code.
-* the MySQL init code named `dbinit.mysql`
-* Java source files: The main class named `Main.java`, the database class named `Database.java`, and all other Java source files.
+* `dbinit.mysql` - the MySQL initilization script 
+* `Main.java`, `Database.java`, and all other Java source files.
 
-2. Design document named `design.pdf`
-* Database: Justify that all your tables conform to 3NF.
-* Database: Plot the Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
-* Java: Plot the Unified Modelling Language (UM) diagram to show all your java classes and their relations. May use the PlantUML plugin fo Eclipse to automatically generate an UML diagram from your Java code. 
-* Overall: Describe the mapping between database tables and Java classes. Specifically, for each database table, which Java class is used to store the data of the table?
-* Overall: Describe how you synchornize your Java data with database data. For example, when to load which data from the database to Java? when to save which data from Java to database?
+2. `design.pdf`: Design document detailing:
+* Database design justification for 3NF compliance of all your database tables.
+* The Entity-Relational (ER) Diagram to show all your database tables and their relations. May use MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Digram from your MySQL code. 
+* The Unified Modelling Language (UM) diagram to show all your Java classes and their relations. May use the PlantUML plugin for Eclipse to automatically generate an UML diagram from your Java code. 
+* Describe the mapping between database tables and Java classes. Specifically, for each database table, which Java class is used to store the data of the table?
+* Describe and justify how you synchornize your Java data with database data. For example, when to load which data from the database to Java? when to save which data from Java to database?
 
-***note that, many of the above questions are open ended. That is, there are multiple possible correct solutions. We are looking for your clear descripotion and brief justication of your design choice.***
+***note that, many questions are open ended; clear descripotion and justications of your design choices are key.***
 
 Again, if you plan to work with one other student for this project, please sign
 up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
@@ -195,11 +195,9 @@ submit your project on Canvas.
 
 ### 5.2 Grading by LAs
 
-1. (40 points) Design Document
-   
-* Same points for each bulliten point required for the design document.
+1. Design Document (40 points): Points allocated evenly across required sections.
 
-2. (60%) Your code
+2. Code (60 points): Point distributed as follows:
 
 * (10 points) Your MySQL initilization script can succssefully create the tables and insert the predefined information into the database
 * (10 points) Main Window: Your code shows the correct number of users in the *Main Window*. 
@@ -208,6 +206,7 @@ submit your project on Canvas.
 * (20 points) Visibility Window: Your code shows the correct visibility list for each user in the *Visibility Window*. The visibility can be succesfully edited (i.e., add and delet users).  
 
 3. Bonus points
+   
    You are also welcome to demonstrate how your Jstgram works to our LAs, and they can then give you their feedbacks and grade your project.
    
 * (Bonus 5 points) Create new accounts: A user can create a new account.  
