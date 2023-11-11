@@ -240,9 +240,9 @@ Note: the mapping and synchronization questions are open-ended;
 
   * Like Posts (Bonus 20 points):  Enable users to like and unlike posts visible to them. The like information should be visible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
-  * Admin Accounts (Bonus 20 points): Define two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the user can create new user accounts, delete existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes per post. In our example, make David an admin user.
+  * Admin Accounts (Bonus 20 points): Define two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
   
-You are encouraged to demonstrate the functionality of your Jstgram before submission, particularly the bonus features, to our LAs for feedback and assessment.
+You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
  
 ### 5.3 Grading by the Instructor (Additional Bonus Points)
 
