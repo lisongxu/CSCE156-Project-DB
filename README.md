@@ -125,7 +125,7 @@ Note that, only a user already in the database can be added to the visibility li
 
 ## 4. Project Requirement
 
-### 4.1 Database design
+### 4.1 Database Design
 
 Design a database to capture the following information
 
@@ -145,7 +145,7 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
   * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
   * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
-### 4.2 Java code design
+### 4.2 Java Code Design
 
 Write your Java program to correctly show the necessary information in each window (e.g., list of posts in the *Post Window*). The exact format of the windows can differ from the provided screenshots.
 
@@ -214,9 +214,9 @@ submit your project on Canvas.
 
   * Synchronization (10 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-Note: the mapping and synchronization questions are open-ended; a clear description and justification of your design choices are crucial.
+Note: the mapping and synchronization questions are open-ended; 
 
-#### 5.2.2. Code (60 points): 
+#### 5.2.2. MySQL and Java Code (60 points): 
 
   * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
@@ -228,26 +228,29 @@ Note: the mapping and synchronization questions are open-ended; a clear descript
 
   * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
-#### 5.2.3. Bonus (35 points)
+#### 5.2.3. Bonus Features (60 points)
   
+  * Comments and Coding Style (Bonus 5 points): Attend lab sessions for detailed grading criteria on comments and coding style.
+
   * Create New Accounts (Bonus 5 points): Enable users to create new accounts.
   
   * Delete Accounts (Bonus 5 points): Allow users to delete their current account. Ensure complete removal of user data, including username, password, visibility, and posts, from the database in the correct sequence.  
 
-  * Comments and Coding Style (Bonus 5 points): Attend lab sessions for detailed grading criteria on comments and coding style.
+  * Sorting Posts (Bonus 5 points): Allow users to choose how to sort the posts in the *Post Window*. In addition to the default ascending order of postTime, users can choose from the following addtional orderings: descending order of postTime, ascending or descending order of usernames of the posts.  
 
-  * Like Posts (Bonus 20 points):  Permit users to like posts visible to them. The like information should be accessible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
+  * Like Posts (Bonus 20 points):  Enable users to like and unlike posts visible to them. The like information should be visible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
+  * Admin Accounts (Bonus 20 points): Define two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the user can create new user accounts, delete existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes per post. In our example, make David an admin user.
   
-You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
+You are encouraged to demonstrate the functionality of your Jstgram before submission, particularly the bonus features, to our LAs for feedback and assessment.
  
-### 5.3 Grading by the instructor (Additional bonus points)
+### 5.3 Grading by the Instructor (Additional Bonus Points)
 
 Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
 For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this project, but they offer differing different performance levels.    
 
-  * Points: Earn an additional up to 60 bonus points
+  * Points: Earn an additional up to 100 bonus points
   
   * Grading: The instructor will grade this report.
 
@@ -261,6 +264,7 @@ For example, let's consider the list of posts in the *Post Window*, which includ
 
   * Experiments: Design and execute experiments to measure the aforementioned performance metrics while progressively increasing the database size. For example, vary the number of randomly generated users/posts varying from 10, to 1000, 100000, or more. Be cautious to avoid overloading the database server.
     
+
 
 ## Credit
 
