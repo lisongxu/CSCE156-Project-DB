@@ -37,7 +37,7 @@ All information should be stored on the database server `cse-linux-01.unl.edu`. 
 
 ### 2.1 Users
 
-To simplify the project, your applicaion does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users into the database. 
+To simplify the project, your application does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users into the database. 
 
 A user can log into Jstgram using their unique username and password. 
 
@@ -57,7 +57,7 @@ Your MySQL initialization script should add the following information to the dat
 
 ### 2.3 Post Visibility
 
-Users can control the visibility of their posts. Posts are always visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
+Users can control the visibility of their posts. Posts are always visible to the poster and can be made visible to selected users. Specifically, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
   * Alice's posts are visible to Bob and Crystal
@@ -80,7 +80,7 @@ It then prompts for the username and password. If these credentials match the in
 
 ### 3.2 Account Window
 
-The *Account Window* for Alice is shown belown as an example. 
+The *Account Window* for Alice is shown below as an example. 
 
 <p align="center">
 <img src="images/account_win.png" alt="Account Window" width="40%"/>
@@ -133,14 +133,14 @@ Feel free to add additional information as needed. Feel free to name your tables
 
 Your tables must adhere to the third normal form (3NF), meaning they should have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
 
-You will write the MySQL initizliation script from scratch. Name it `dbinit.sql`.
+You will write the MySQL initialization script from scratch. Name it `dbinit.sql`.
 
 ***Recommendation***
 
-  * Utilize `auto_increment` for primay keys to avoid keeping track of the largest integer in Java when inserting new rows.
-  * Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are famaliar with.
+  * Utilize `auto_increment` for primary keys to avoid keeping track of the largest integer in Java when inserting new rows.
+  * Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
   * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
-  * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some commnon columns.
+  * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
 ### 4.2 Java code design
 
@@ -177,7 +177,7 @@ Submit the following to Canvas (not CodePost).
 
 
 1. `Project2.zip`: A Zip file of all source code.
-  * `dbinit.mysql` - the MySQL initilization script 
+  * `dbinit.mysql` - the MySQL initialization script 
   * `Main.java`, `Database.java`, and all other Java source files.
 
 2. `design.pdf`: Design document described in the next section.
@@ -194,17 +194,17 @@ submit your project on Canvas.
 
   * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The PlantUML plugin for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
-  * 3NF Complicance (10 points) : Provide a justification for 3NF compliance of all your database tables.
+  * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables.
   
   * Mapping (10 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
 
-  * Synchronization (10 points): Describe how you synchornize your Java data with the data on the database server, along with a breifly justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
+  * Synchronization (10 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-Note: the mapping and synchrinization questions are open-ended; a clear descripotion and justication of your design choices are crucial.
+Note: the mapping and synchronization questions are open-ended; a clear description and justification of your design choices are crucial.
 
 #### 5.2.2. Code (60 points): 
 
-  * MySQL Initilization Script (10 points): Succssefully create the tables and insert the predefined data into the database.
+  * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
   * Main Window (10 points): Correctly display the current number of users. 
 
@@ -231,7 +231,7 @@ You are encouraged to demonstrate the functionality of your Jstgram, particularl
 
 Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
-For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this porject, but they offer differing different performance levels.    
+For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this project, but they offer differing different performance levels.    
 
   * Points: Earn an additional up to 60 bonus points
   
