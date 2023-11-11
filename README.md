@@ -179,18 +179,18 @@ public class Database {
 Submit the following to Canvas (not CodePost). 
 
 1. `Project2.jar`: Follow the instructions below to generate a runnable JAR file that the LAs can execute.
-   1) Run your project at least once (creates a "Launch Configuration" in Eclipse)
-   2) Right click your project, and select `Export ...`
-   3) In the Java folder, select `Runnable JAR file`
-   4) In the "Runnable JAR File Specification"
-       * select your project in "Lanuch Configuration"
-       * change file name to `Project2.jar` in "Export destination"
-       * select `Package required libraries into generated JAR` for "Library handling"
+   *  Step 1: Run your project at least once (creates a `Launch Configuration` at step 4)
+   *  Step 2: Right click your project, and select `Export ...`
+   *  Step 3: In the Java folder, select `Runnable JAR file`
+   *  Step 4: In the "Runnable JAR File Specification"
+       * select your project in `Lanuch Configuration`
+       * change file name to `Project2.jar` in `Export destination`
+       * select `Package required libraries into generated JAR` for `Library handling`
        * then click the `Finish` button
 
 2. `Project2.zip`: A Zip file of all source code that the LAs can check.
-  * `dbinit.mysql` - the MySQL initialization script 
-  * `Main.java`, `Database.java`, and all other Java source files.
+   * `dbinit.mysql` - the MySQL initialization script 
+   * `Main.java`, `Database.java`, and all other Java source files.
 
 3. `design.pdf`: Design document described in the next section.
 
