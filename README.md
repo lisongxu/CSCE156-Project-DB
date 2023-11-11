@@ -182,7 +182,7 @@ Submit the following to Canvas (not CodePost).
    *  Step 1: Run your project at least once (creates a `Launch Configuration` at step 4)
    *  Step 2: Right click your project, and select `Export ...`
    *  Step 3: In the Java folder, select `Runnable JAR file`
-   *  Step 4: In the "Runnable JAR File Specification"
+   *  Step 4: In the `Runnable JAR File Specification`
        * select your project in `Lanuch Configuration`
        * change file name to `Project2.jar` in `Export destination`
        * select `Package required libraries into generated JAR` for `Library handling`
