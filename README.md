@@ -57,7 +57,7 @@ Your MySQL initialization script should add the following information to the dat
 
 ### 2.3 Post Visibility
 
-Users can control the visibility of their posts. Posts are alwasy visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
+Users can control the visibility of their posts. Posts are always visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
   * Alice's posts are visible to Bob and Crystal
