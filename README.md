@@ -33,7 +33,7 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All information should be stored on the database server `cse-linux-01.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting initial user and post data as specified below, before Jstgram starts.
+All information should be stored on the database server `cse-linux-01.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting predefined user and post data as specified below, before Jstgram starts.
 
 ### 2.1 Users
 
@@ -46,7 +46,7 @@ Your MySQL initialization script should add the following information to the dat
 
 ### 2.2 Posts
 
-To simplify the project, your application only needs to support the text posts. User can publish text posts only (no text art posts as in Project 1).
+To simplify the project, your application only needs to support the text posts. That is, users can publish text posts only (no text art posts as in Project 1).
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
   * Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
@@ -57,7 +57,7 @@ Your MySQL initialization script should add the following information to the dat
 
 ### 2.3 Post Visibility
 
-Users can control the visibility of thir posts. Posts are alwasy visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
+Users can control the visibility of their posts. Posts are alwasy visible to the poster and can be made visible to selected users. Specifcially, each user maintains a visibility list and the posts of the users are visible to the users in the visibility list.
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
   * Alice's posts are visible to Bob and Crystal
