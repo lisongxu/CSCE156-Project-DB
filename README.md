@@ -92,7 +92,7 @@ The current user can choose to view posts, edit post visibility, or quit the app
 
 The *Post Window* lists all posts by the current user and all posts visible to them, in the *ascending* order of post times. 
 
-Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with your MySQL script. Note that different users see different lists of posts.
+Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script. Note that different users see different lists of posts.
 
 <p align="center">
 <img src="images/post_win_alice.png" alt="Post Window" width="40%"/>
@@ -107,7 +107,7 @@ The current user can choose to publish a new post, or return back to the *Accoun
 
 The *Visibility Window* shows the list of users who can see the posts of the current user.
 
-Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, based on the database initialized with your MySQL script.
+Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script.
 
 <p align="center">
 <img src="images/visibility_win_alice.png" alt="Visibility Window" width="40%"/>
