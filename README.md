@@ -65,6 +65,8 @@ Your MySQL initialization script should add the following information to the dat
   * Crystal's posts are visible to Alice
   * David's posts are not visible to other users.
 
+Note: The visibility list of a user, say Crystal, controls which other users can see Crystal's posts. In our example, only Alice can see Crystal's posts, in addition to Crystal herself. 
+
   
 ## 3. Jstgram Windows
 
@@ -92,7 +94,7 @@ The current user can choose to view posts, edit post visibility, or quit the app
 
 The *Post Window* lists all posts by the current user and all posts visible to them, in the *ascending* order of post times. 
 
-Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script. Note that different users see different lists of posts.
+Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script. Note that different users see different lists of posts. For example, Crystal can see the posts of Alice, Bob, and Crystal, because both Alice's and Bob's posts are visible to Crystal. 
 
 <p align="center">
 <img src="images/post_win_alice.png" alt="Post Window" width="40%"/>
@@ -105,7 +107,7 @@ The current user can choose to publish a new post, or return back to the *Accoun
 
 ### 3.4  Visibility Window
 
-The *Visibility Window* shows the list of users who can see the posts of the current user.
+The *Visibility Window* shows the list of users who can see the posts of the current user. 
 
 Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script.
 
@@ -115,6 +117,7 @@ Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, 
 <img src="images/visibility_win_crystal.png" alt="Visibility Window" width="40%"/>
 <img src="images/visibility_win_david.png" alt="Visibility Window" width="40%"/>
 </p>  
+
 
 The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, the database and the *Visibility Window* should be updated accordingly.
 
