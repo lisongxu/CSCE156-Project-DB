@@ -24,7 +24,7 @@ submit your project on Canvas.
 
 ## 1. Relation to Project 1
 
-This project is independent of Project 1, although both projects develop Jstgram. You do not need to use use your code from Project 1. In fact it is recommendeded not to use your Project 1 code due to the significant differences between the projects.
+This project is independent of Project 1, although both projects develop Jstgram. You do not need to use your code from Project 1. In fact it is recommendeded not to use your Project 1 code due to the significant differences between the projects.
 
 
 ## 2. Social Media Application - Jstgram
