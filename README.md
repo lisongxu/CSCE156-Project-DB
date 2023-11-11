@@ -188,6 +188,8 @@ Submit the following to Canvas (not CodePost).
        * select `Package required libraries into generated JAR` for `Library handling`
        * then click the `Finish` button
 
+   ***Note that please do not change your database password, because the LAs will directly execute your JAR file that uses your database username and password***
+
 2. `Project2.zip`: A Zip file of all source code that the LAs can check.
    * `dbinit.mysql` - the MySQL initialization script 
    * `Main.java`, `Database.java`, and all other Java source files.
