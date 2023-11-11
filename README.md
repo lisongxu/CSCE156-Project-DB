@@ -214,15 +214,15 @@ submit your project on Canvas.
 
   * Synchronization (10 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-Note: the mapping and synchronization questions are open-ended; 
+Note: the mapping and synchronization questions are open-ended. 
 
 #### 5.2.2. MySQL and Java Code (60 points): 
 
   * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
-  * Main Window (10 points): Correctly display the current number of users. 
+  * Main Window (5 points): Correctly display the current number of users. 
 
-  * Account Window (10 points): Correctly validate the username and password before entering the Account Window. 
+  * Account Window (5 points): Correctly validate the username and password before entering the Account Window. 
 
   * Post Window (20 points): Correct post display and functionality for new posts.
 
