@@ -216,7 +216,9 @@ submit your project on Canvas.
 
   * Synchronization (5 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-  * Testing (5 points): Describe how you test each component and the overall application. 
+  * Testing (5 points): Describe how you test each component and the overall application.
+    
+  * Bonus Features: Describe each bonus feature that you have implemented and how LAs can use these features. 
     
   Note: the mapping and synchronization questions are open-ended. 
 
@@ -249,6 +251,8 @@ submit your project on Canvas.
   * Admin Accounts (Bonus 20 points): Define two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
+
+Your design doucment should describe each bonus feature that you have implemented and how LAs can use these features.
  
 ### 5.3 Grading by the Instructor (Additional Bonus Points)
 
