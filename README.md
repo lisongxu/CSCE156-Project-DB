@@ -204,17 +204,23 @@ submit your project on Canvas.
 
 #### 5.2.1. Design Document (40 points)
 
+  * Introduction (5 points) : Provide a short introduction to your application. For example, what features and functionality does it provide at a high-level? Who will use the application?
+
   * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for automatic generation of an ER Digram from your MySQL code. 
 
+  * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables. That is, justify that they have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
+  
   * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The PlantUML plugin for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
-  * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables.
-  
-  * Mapping (10 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
+  * Mapping (5 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
 
-  * Synchronization (10 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
+  * Synchronization (5 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
-Note: the mapping and synchronization questions are open-ended. 
+  * Testing (5 points): Describe how you test each component and the overall application. 
+    
+  Note: the mapping and synchronization questions are open-ended. 
+
+  [Here](designdocument.docx) is a Word template for design document.
 
 #### 5.2.2. MySQL and Java Code (60 points): 
 
