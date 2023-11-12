@@ -220,7 +220,7 @@ submit your project on Canvas.
     
   Note: the mapping and synchronization questions are open-ended. 
 
-  [Here](designdocument.docx) is a Word template for design document.
+  [`design.docx`](design.docx) is a Word template for the design document.
 
 #### 5.2.2. MySQL and Java Code (60 points): 
 
