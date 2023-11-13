@@ -252,7 +252,7 @@ submit your project on Canvas.
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
 
-Your design doucment should describe each bonus feature that you have implemented and how LAs can use these features.
+Your design document should describe each bonus feature that you have implemented and how LAs can use these features.
  
 ### 5.3 Grading by the Instructor (Additional Bonus Points)
 
