@@ -192,7 +192,7 @@ Submit the following to Canvas (not CodePost).
    
 
 3. `Project2.zip`: A Zip file of all source code that the LAs can execute and check.
-   * `dbinit.mysql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
+   * `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
    * `Main.java`, `Database.java`, and all other Java source files.
 
 4. `design.pdf`: Design document described in the next section.
