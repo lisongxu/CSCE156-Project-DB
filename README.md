@@ -141,7 +141,7 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 ***Recommendation***
 
   * Utilize `auto_increment` for primary keys to avoid keeping track of the largest integer in Java when inserting new rows.
-  * Use only `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
+  * Use `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
   * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
   * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
