@@ -211,7 +211,7 @@ submit your project on Canvas.
 
   * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables. That is, justify that they have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
   
-  * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The PlantUML plugin for Eclipse can be employed to automatically generate a UML diagram from your Java code.
+  * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The [PlantUML plugin](https://github.com/cbourke/ComputerScienceII/blob/master/resources/uml.md) for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
   * Mapping (5 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
 
