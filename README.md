@@ -259,7 +259,7 @@ Your design document should describe each bonus feature that you have implemente
 
 Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
 
-For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this project, but they offer differing different performance levels.    
+For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this project, but they offer different performance levels.    
 
   * Points: Earn an additional up to 100 bonus points
   
