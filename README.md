@@ -142,8 +142,8 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 
   * Utilize `auto_increment` for primary keys to avoid keeping track of the largest integer in Java when inserting new rows.
   * Use `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
-  * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
-  * If necessary,  use the more flexible `on` clause for join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
+  * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get the current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
+  * If necessary,  use the more flexible `on` clause for a join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
 ### 4.2 Java Code Design
 
@@ -179,11 +179,11 @@ public class Database {
 Submit the following to Canvas (not CodePost). 
 
 1. `Project2.jar`: Follow the instructions below to generate a runnable JAR file that the LAs can execute.
-   *  Step 1: Run your project at least once (creates a `Launch Configuration` for step 4)
-   *  Step 2: Right click your project, and select `Export ...`
+   *  Step 1: Run your project at least once (create a `Launch Configuration` for step 4)
+   *  Step 2: Right-click your project, and select `Export ...`
    *  Step 3: In the Java folder, select `Runnable JAR file`
    *  Step 4: In the `Runnable JAR File Specification`
-       * select your project in `Lanuch Configuration`
+       * select your project in `Launch Configuration`
        * change file name to `Project2.jar` in `Export destination`
        * select `Package required libraries into generated JAR` for `Library handling`
        * then click the `Finish` button
@@ -195,7 +195,7 @@ Submit the following to Canvas (not CodePost).
    * `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
    * `Main.java`, `Database.java`, and all other Java source files.
 
-4. `design.pdf`: Design document described in the next section.
+4. `design.pdf`: Design document as described in the next section.
 
 Again, if you plan to work with one other student for this project, please sign
 up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
@@ -207,15 +207,15 @@ submit your project on Canvas.
 
   * Introduction (5 points) : Provide a short introduction to your application. For example, what features and functionality does it provide at a high-level? Who will use the application?
 
-  * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for automatic generation of an ER Digram from your MySQL code. 
+  * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for the automatic generation of an ER Diagram from your MySQL code. 
 
   * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables. That is, justify that they have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
   
   * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The [PlantUML plugin](https://github.com/cbourke/ComputerScienceII/blob/master/resources/uml.md) for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
-  * Mapping (5 points) : Describe the correspondence between database tables and Java classes, include a briefly rationale. For example, identify which Java class stores the data of each database table?
+  * Mapping (5 points) : Describe the correspondence between database tables and Java classes, including a brief rationale. For example, identify which Java class stores the data of each database table.
 
-  * Synchronization (5 points): Describe how you synchronize your Java data with the data on the database server, along with a breif justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
+  * Synchronization (5 points): Describe how you synchronize your Java data with the data on the database server, along with a brief justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
 
   * Testing (5 points): Describe how you test each component and the overall application.
     
@@ -245,7 +245,7 @@ submit your project on Canvas.
   
   * Delete Accounts (Bonus 5 points): Allow users to delete their current account. Ensure complete removal of user data, including username, password, visibility, and posts, from the database in the correct sequence.  
 
-  * Sorting Posts (Bonus 5 points): Allow users to choose how to sort the posts in the *Post Window*. In addition to the default ascending order of postTime, users can choose from the following addtional orderings: descending order of postTime, ascending or descending order of usernames of the posts.  
+  * Sorting Posts (Bonus 5 points): Allow users to choose how to sort the posts in the *Post Window*. In addition to the default ascending order of postTime, users can choose from the following additional orderings: descending order of postTime, ascending or descending order of usernames of the posts.  
 
   * Like Posts (Bonus 20 points):  Enable users to like and unlike posts visible to them. The like information should be visible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
