@@ -33,9 +33,9 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All information should be stored on the database server `cse-linux-01.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting predefined user and post data as specified below, before Jstgram starts.
+All information should be stored on the database server `nuros.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting predefined user and post data as specified below, before Jstgram starts.
 
-### 2.1 Users
+### 2.2 Users
 
 To simplify the project, your application does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users into the database. 
 
@@ -44,7 +44,7 @@ A user can log into Jstgram using their unique username and password.
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
 *  Four users with usernames: Alice, Bob, Crystal, and David, and their respective passwords: Alice123, Bob123, Crystal123, David123.
 
-### 2.2 Posts
+### 2.3 Posts
 
 To simplify the project, your application only needs to support the text posts. That is, users can publish text posts only (no text art posts as in Project 1).
 
@@ -55,7 +55,7 @@ Your MySQL initialization script should add the following information to the dat
   * Alice posted "Lab due tonight?" at 23:30:00 on October 27, 2023
   * Crystal posted "No, it's due next week" at 23:35:00 on October 27, 2023
 
-### 2.3 Post Visibility
+### 2.4 Post Visibility
 
 Users can control the visibility of their posts. Posts are always visible to the poster and can be made visible to selected users. Specifically, each user maintains a visibility list and the user's posts are visible to the users in the visibility list.
 
