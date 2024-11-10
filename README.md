@@ -1,7 +1,7 @@
 # Computer Science II
 ## Project - Database
 
-This project is part of  Computer Science II (CSCE 156) for Fall 2023 
+This project is part of  Computer Science II (CSCE 156) for Fall 2024 
 in the [School of Computing](https://computing.unl.edu) 
 at the [University of Nebraska-Lincoln](https://www.unl.edu).
 
@@ -19,12 +19,14 @@ After completing this lab, you should be able to:
 ### Peer Programming Pair-Up
 
 At the beginning of each project, you may find a team member on your own.  Please ***sign
-up for a group on Canvas*** (`People` then `Groups`), and only one member of your group needs to
-submit your project on Canvas.
+up for a group on Canvas*** (`People`, then `Groups`, and then join a group for Project 2), and only one group member needs to
+submit your project on Canvas.  If you prefer to work on this project by yourself, that is fine too.
+
+
 
 ## 1. Relation to Project 1
 
-This project is independent of Project 1, although both projects develop Jstgram. You do not need to use your code from Project 1. In fact it is recommended not to use your Project 1 code due to the significant differences between the projects.
+This project is independent of Project 1, although both projects develop Jstgram. You do not need to reuse your code from Project 1. In fact, it is recommended not to use your Project 1 code due to the significant differences between these two projects.
 
 
 ## 2. Social Media Application - Jstgram
@@ -33,39 +35,38 @@ In this project, we will design and develop a database version for *Jstgram*.
 
 ### 2.1 Database
 
-All information should be stored on the database server `nuros.unl.edu`. Please write a MySQL initialization script to set up the database, such as creating tables and inserting predefined user and post data as specified below, before Jstgram starts.
+All information should be stored on the database server `nuros.unl.edu`. Please write a MySQL initialization script to set up the database before Jstgram starts. The MySQL initialization script creates the tables and inserts the predefined user and post data as specified below.
 
 ### 2.2 Users
 
-To simplify the project, your application does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users into the database. 
+To simplify the project, your application does not need to support adding or deleting users. Instead, we will use the MySQL initialization script to add a predefined group of users to the database. 
 
 A user can log into Jstgram using their unique username and password. 
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
-*  Four users with usernames: Alice, Bob, Crystal, and David, and their respective passwords: Alice123, Bob123, Crystal123, David123.
+*  Four users with usernames: Alice, Bob, Crystal, and David, and their respective passwords: Alice123, Bob123, Crystal123, and David123.
 
 ### 2.3 Posts
 
 To simplify the project, your application only needs to support the text posts. That is, users can publish text posts only (no text art posts as in Project 1).
 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
-  * Alice posted "Project deadline extended?" at 19:00:00 on October 12, 2023.
-  * Bob posted "Yep" at 19:01:00 on October 12, 2023.
-  * David posted "Fall break" at 09:00:00 on October 16, 2023
-  * Alice posted "Lab due tonight?" at 23:30:00 on October 27, 2023
-  * Crystal posted "No, it's due next week" at 23:35:00 on October 27, 2023
+  * Alice posted "When's the project due?" at 19:00:00 on November 20, 2024
+  * Bob posted "After Thanksgiving" at 19:01:00 on November 20, 2024
+  * David posted "Yup, after Thanksgiving" at 09:00:00 on November 21, 2024
+  * Alice posted "Lab this week?" at 10:30:00 on November 25, 2024
+  * Crystal posted "Nope" at 10:35:00 on November 25, 2024
 
 ### 2.4 Post Visibility
 
-Users can control the visibility of their posts. Posts are always visible to the poster and can be made visible to selected users. Specifically, each user maintains a visibility list and the user's posts are visible to the users in the visibility list.
+A user can manage who sees the user's posts by setting a visibility list. A post is visible to those included in this list, as well as to the user who made the post. 
 
-Your MySQL initialization script should add the following information to the database before Jstgram starts.
-  * Alice's posts are visible to Bob and Crystal
-  * Bob's posts are visible to Alice and Crystal
-  * Crystal's posts are visible to Alice
-  * David's posts are not visible to other users.
+Your MySQL initialization script should add the following visibility lists to the database before Jstgram starts.
+  * The visibility list of Alice contains Bob and Crystal. That is, Alice's posts are visible to Bob, Crystal, and Alice.
+  * The visibility list of Bob contains Alice and Crystal.
+  * The visibility list of Crystal contains Alice.
+  * The visibility list of David is empty. That is, David's posts are visible to only David.
 
-Note: The visibility list of a user, say Crystal, controls which other users can see Crystal's posts. In our example, only Alice can see Crystal's posts, in addition to Crystal herself. 
 
   
 ## 3. Jstgram Windows
@@ -103,11 +104,11 @@ Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, resp
 <img src="images/post_win_david.png" alt="Post Window" width="40%"/>
 </p>  
 
-The current user can choose to publish a new post, or return back to the *Account Window*. If a new post is published, the database and the *Post Window* should be updated accordingly.
+The current user can choose to publish a new post, or return back to the *Account Window*. If a new post is published, both the database and the *Post Window* should be updated accordingly.
 
 ### 3.4  Visibility Window
 
-The *Visibility Window* shows the list of users who can see the posts of the current user. 
+The *Visibility Window* shows the visibility list of the current user. 
 
 Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script.
 
@@ -119,7 +120,7 @@ Below are examples of the Visibility Window for Alice, Bob, Crystal, and David, 
 </p>  
 
 
-The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, the database and the *Visibility Window* should be updated accordingly.
+The current user can choose to add a user to their visibility list, delete a user from their visibility list, or go back to the account window. If a user is added or deleted, both the database and the *Visibility Window* should be updated accordingly.
 
 Note that, only a user already in the database can be added to the visibility list, and only a user already in the visibility list can be deleted from the visibility list.
 
@@ -129,8 +130,8 @@ Note that, only a user already in the database can be added to the visibility li
 
 Design a database to capture the following information
 
-  * User details: userID, username, password, visibility list, 
-  * Post details: postID, postText, postTime, the user who published the post
+  * User details: userID, username, password, visibility list, where userID is unique and username is also unique.
+  * Post details: postID, postText, postTime, the user who published the post. 
 
 Feel free to add additional information as needed. Feel free to name your tables and attributes. If you plan to use natural join, ensure at least one common column between the two tables.
 
