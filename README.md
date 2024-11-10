@@ -93,7 +93,7 @@ The current user can choose to view posts, edit post visibility, or quit the app
 
 ### 3.3 Post Window
 
-The *Post Window* lists all posts by the current user and all posts visible to them, in the *ascending* order of post times. 
+The *Post Window* lists all posts visible to the current user in the *ascending* order of post times. 
 
 Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script. Note that different users see different lists of posts. For example, Crystal can see the posts of Alice, Bob, and Crystal, because both Alice's and Bob's posts are visible to Crystal. 
 
@@ -143,21 +143,21 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 
   * Utilize `auto_increment` for primary keys to avoid keeping track of the largest integer in Java when inserting new rows.
   * Use `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
-  * For postTime (i.e., the date and time of a post), use `LocalDateTime.now()` in Java to get the current date and time, formatting it as a string with  `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` for storage in the database. 
+  * Define postTime (i.e., the date and time of a post) as a `varchar(255)` in the database and as `LocalDateTime` in Java. From database to Java: use `LocalDateTime.parse(String)` to convert a postTime from a string to a `LocalDateTime`. From Java to database: use `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` to convert a postTime from a `LocalDateTime` to a string in the specified format. In addition, use `LocalDateTime.now()` in Java to get the current date and time. 
   * If necessary,  use the more flexible `on` clause for a join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
 ### 4.2 Java Code Design
 
 Write your Java program to correctly show the necessary information in each window (e.g., list of posts in the *Post Window*). The exact format of the windows can differ from the provided screenshots.
 
-You will write all code from scratch. Define appropriate Java classes, such as 
+You will write all the code from scratch. Define appropriate Java classes, such as 
 * `Main.java` as the main class for ease of execution by LAs
-* `Database.java` containing database connection details as `public final static String` for easy modification by LAs.
+* `Database.java` containing database connection details as `public final static String` for easy debugging and modification by LAs.
 
 ```Java
 public class Database {
 	// JDBC driver parameters
-	public final static String hostname = "cse-linux-01.unl.edu";
+	public final static String hostname = "nuros-linux-01.unl.edu";
 	public final static String username = "xxx"; // your database username
 	public final static String password = "xxx"; // your database password
 	public final static String url = "jdbc:mysql://"+hostname+"/"+username;
@@ -169,7 +169,7 @@ public class Database {
 
 ***Recommendation***
   * Add comprehensive comments for clarity
-  * Adhere to good coding practices to be discussed in lab sessions by LAs.
+  * Adhere to good coding practices
   
 
 ## 5. Grading and Submitting Your Project
@@ -177,7 +177,7 @@ public class Database {
  
 ### 5.1 Submitting to Canvas
 
-Submit the following to Canvas (not CodePost). 
+Submit the following to Canvas. Our LAs will manually grade them.
 
 1. `Project2.jar`: Follow the instructions below to generate a runnable JAR file that the LAs can execute.
    *  Step 1: Run your project at least once (create a `Launch Configuration` for step 4)
@@ -188,45 +188,48 @@ Submit the following to Canvas (not CodePost).
        * change file name to `Project2.jar` in `Export destination`
        * select `Package required libraries into generated JAR` for `Library handling`
        * then click the `Finish` button
+   * Type `java -jar Project2.jar` in the command line to test whether your JAR runs correctly. 
 
    ***Note that please do not change your database password, because the LAs will directly execute your JAR file that uses your database username and password***
    
 
-3. `Project2.zip`: A Zip file of all source code that the LAs can execute and check.
-   * `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
-   * `Main.java`, `Database.java`, and all other Java source files.
+2. `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
+
+3. `Project2.zip`: A Zip file of all Java source files that the LAs can execute and check, such as `Main.java`, `Database.java`, and all other Java source files.
 
 4. `design.pdf`: Design document as described in the next section.
 
-Again, if you plan to work with one other student for this project, please sign
-up for a group on Canvas (`people` then `Groups`), and only one member of your group needs to
+Again, if you plan to work with one other student on this project, please sign
+up for a group on Canvas (`People`, then `Groups`, and then join a group for Project 2), and only one group member needs to
 submit your project on Canvas.
 
 ### 5.2 Grading by LAs
 
-#### 5.2.1. Design Document (40 points)
+#### 5.2.1. Design Document (35 points)
 
-  * Introduction (5 points) : Provide a short introduction to your application. For example, what features and functionality does it provide at a high-level? Who will use the application?
+  * Introduction (5 points): Provide a short introduction to your application. For example, what features and functionality does it provide at a high level? Who will use the application?
 
-  * ER Diagram (5 points) : Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ for the automatic generation of an ER Diagram from your MySQL code. 
+  * ER Diagram (5 points): Present an Entity-Relational (ER) Diagram illustrating all your database tables and their relationships. You can utilize tools like  MySQL Workbench or free https://drawsql.app/ to automatically generate an ER Diagram from your MySQL code. 
 
-  * 3NF Compliance (10 points) : Provide a justification for 3NF compliance of all your database tables. That is, justify that they have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
+  * 3NF Compliance (5 points): Provide a justification for 3NF compliance of all your database tables. That is, justify that they have no group of values for an attribute, no partial dependencies, and no transitive dependencies.
   
-  * UML Diagram (5 points) : Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The [PlantUML plugin](https://github.com/cbourke/ComputerScienceII/blob/master/resources/uml.md) for Eclipse can be employed to automatically generate a UML diagram from your Java code.
+  * UML Diagram (5 points): Display a Unified Modeling Language (UML) diagram to represent all your Java classes and their relationships. The [PlantUML plugin](https://github.com/cbourke/ComputerScienceII/blob/master/resources/uml.md) for Eclipse can be employed to automatically generate a UML diagram from your Java code.
 
-  * Mapping (5 points) : Describe the correspondence between database tables and Java classes, including a brief rationale. For example, identify which Java class stores the data of each database table.
+  * Mapping (5 points): Describe the correspondence between database tables and Java classes, including a brief rationale. For example, identify which Java class stores the data of each database table.
 
-  * Synchronization (5 points): Describe how you synchronize your Java data with the data on the database server, along with a brief justification. For example, outlining when to load which data from the database server to Java? when to save which data from Java to the database server?
+  * Post Window (5 points): Describe how you get all posts visible to the current user. There are several different methods. For example, one method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server.     
 
   * Testing (5 points): Describe how you test each component and the overall application.
     
   * Bonus Features: Describe each bonus feature that you have implemented and how LAs can use these features. 
     
-  Note: the mapping and synchronization questions are open-ended. 
+  Note: the mapping and post-window questions are open-ended. 
 
   [`design.docx`](design.docx) is a Word template for the design document.
 
-#### 5.2.2. MySQL and Java Code (60 points): 
+#### 5.2.2. MySQL and Java Code (65 points): 
+
+  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, and `design.pdf`.
 
   * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
@@ -238,9 +241,9 @@ submit your project on Canvas.
 
   * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
 
-#### 5.2.3. Bonus Features (60 points)
+#### 5.2.3. Bonus Features (Additional points)
   
-  * Comments and Coding Style (Bonus 5 points): Attend lab sessions for detailed grading criteria on comments and coding style.
+  * Comments and Coding Style (Bonus 5 points): Javadoc-style comments on methods; Class documentation that includes name, date made, and purpose of class; Variable names that match style (meaningful names and camelCase); Appreciate and consistent use of white space (mainly regarding proper use of indention); Not having dead code (i.e., commented out unused code).
 
   * Create New Accounts (Bonus 5 points): Enable users to create new accounts.
   
@@ -250,33 +253,12 @@ submit your project on Canvas.
 
   * Like Posts (Bonus 20 points):  Enable users to like and unlike posts visible to them. The like information should be visible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
-  * Admin Accounts (Bonus 20 points): Define two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
+  * Admin Accounts (Bonus 10 points): There are two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
 
 Your design document should describe each bonus feature that you have implemented and how LAs can use these features.
  
-### 5.3 Grading by the Instructor (Additional Bonus Points)
-
-Write a report to study and compare the performance of various data retrieval methods from the database server to Java. 
-
-For example, let's consider the list of posts in the *Post Window*, which includes all posts published by the current user and all posts visible to them. One possible method involves a single well-designed join select statement to directly retrieve these posts from the database server. Alternatively, one could first use a select statement to retrieve the list of users whose posts are visible to the current user, followed by one or more select statements to retrieve their posts from the database server. Both methods are suitable for this project, but they offer different performance levels.    
-
-  * Points: Earn an additional up to 100 bonus points
-  
-  * Grading: The instructor will grade this report.
-
-  * Submission: Submit your report `study.pdf` to "Project 2 Bonus - Performance Study" on Canvas.
-  
-  * Methods to study: Design and implement several different methods for data retrieval from the database server to Java. 
-
-  * Performance metrics: Investigate and identify methods to (automatically or manually) measure the total database runtime for all your statements and/or the total network traffic between the database server and your Java code. You may also consider other performance metrics, subject to instructor approval.
-
-  * Dataset: Develop code to populate your database with a given number of randomly generated users, posts, and visibility settings.
-
-  * Experiments: Design and execute experiments to measure the aforementioned performance metrics while progressively increasing the database size. For example, vary the number of randomly generated users/posts varying from 10, to 1000, 100000, or more. Be cautious to avoid overloading the database server.
-    
-
 
 ## Credit
 
