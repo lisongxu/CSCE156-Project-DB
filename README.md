@@ -53,7 +53,7 @@ To simplify the project, your application only needs to support the text posts. 
 Your MySQL initialization script should add the following information to the database before Jstgram starts.
   * Alice posted "When's the project due?" at 19:00:00 on November 20, 2024
   * Bob posted "After Thanksgiving" at 19:01:00 on November 20, 2024
-  * David posted "Yup, after Thanksgiving" at 09:00:00 on November 21, 2024
+  * David posted "Great job, me" at 09:00:00 on November 21, 2024
   * Alice posted "Lab this week?" at 10:30:00 on November 25, 2024
   * Crystal posted "Nope" at 10:35:00 on November 25, 2024
 
