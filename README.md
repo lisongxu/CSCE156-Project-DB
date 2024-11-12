@@ -93,7 +93,7 @@ The current user can choose to view posts, edit post visibility, or quit the app
 
 ### 3.3 Post Window
 
-The *Post Window* lists all posts visible to the current user in the *ascending* order of post times. 
+The *Post Window* lists all posts visible to the current user in the *ascending* order of post times (i.e., from the oldest post to the latest post). 
 
 Below are examples of the *Post Window* for Alice, Bob, Crystal, and David, respectively, based on the database initialized with the MySQL script. Note that different users see different lists of posts. For example, Crystal can see the posts of Alice, Bob, and Crystal, because both Alice's and Bob's posts are visible to Crystal. 
 
@@ -210,6 +210,9 @@ Submit the following to Canvas. Our LAs will manually grade them.
 
 4. `design.pdf`: Design document as described in the next section.
 
+5. Your MySQL username and password: Make sure they are the same as the ones specified in your Database.java
+   
+
 Again, if you plan to work with one other student on this project, please sign
 up for a group on Canvas (`People`, then `Groups`, and then join a group for Project 2), and only one group member needs to
 submit your project on Canvas.
@@ -240,7 +243,7 @@ submit your project on Canvas.
 
 #### 5.2.2. MySQL and Java Code (65 points): 
 
-  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, and `design.pdf`.
+  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, `design.pdf`, and your MySQL username and password.
 
   * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
@@ -248,9 +251,15 @@ submit your project on Canvas.
 
   * Account Window (5 points): Correctly validate the username and password before entering the Account Window. 
 
-  * Post Window (20 points): Correct post display and functionality for new posts.
+  * Post Window (15 points): Correct post display and functionality for new posts.
+     * 10 points: Correctly display all posts visible to the current user in the *ascending* order of post times (i.e., from the oldest post to the latest post).
+     * 5 points: Correctly publish a new post and update the database accordingly
 
-  * Visibility Window (20 points): Correct visibility list display and functionality for editing the list.  
+  * Visibility Window (25 points): Correct visibility list display and functionality for editing the list.
+     * 5 points: Correctly display the visibility list of the current user. 
+     * 5 points: Correctly add a user to a visibility list. Note that, only a user already in the database can be added to the visibility list.
+     * 5 points: Correctly delete a user from a visibility list.   Note that, only a user already in the visibility list can be deleted from the visibility list.
+     * 5 points: Correctly display new post windows after updating visibility lists. For example, after Alice adds David to Alice's visibility list, David can see Alice's posts in David's post window. 
 
 #### 5.2.3. Bonus Features (Additional points)
   
