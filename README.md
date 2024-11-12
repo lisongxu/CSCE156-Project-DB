@@ -153,9 +153,12 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 
 Write your Java program to correctly show the necessary information in each window (e.g., list of posts in the *Post Window*). The exact format of the windows can differ from the provided screenshots.
 
-You will write all the code from scratch. Define appropriate Java classes, such as 
+You will write all the code from scratch. You are recommended to follow the JDBC lecture slides to define appropriate Java classes, such as 
 * `Main.java` as the main class for ease of execution by LAs
 * `Database.java` containing database connection parameters for easy debugging and modification by LAs.
+* Two classes (one for data and the other for database access) for each table
+* Two classes (one for query result and the other for database access) for each complex query.
+* View.java for interacting with the users 
 
 ```Java
 public class Database {
