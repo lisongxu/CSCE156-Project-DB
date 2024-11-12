@@ -262,7 +262,7 @@ submit your project on Canvas.
      * 5 points: Correctly display the visibility list of the current user. 
      * 5 points: Correctly add a user to a visibility list. Note that, only a user already in the database can be added to the visibility list.
      * 5 points: Correctly delete a user from a visibility list.   Note that, only a user already in the visibility list can be deleted from the visibility list.
-     * 5 points: Correctly display new post windows after updating visibility lists. For example, after Alice adds David to Alice's visibility list, David can see Alice's posts in David's post window. 
+     * 10 points: Correctly display new post windows after updating visibility lists. For example, after Alice adds David to Alice's visibility list, David can see Alice's posts in David's post window. 
 
 #### 5.2.3. Bonus Features (Additional points)
   
