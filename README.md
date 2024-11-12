@@ -143,7 +143,10 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 
   * Utilize `auto_increment` for primary keys to avoid keeping track of the largest integer in Java when inserting new rows.
   * Use `int`, `varchar(n)`, and `char(n)` data types that we have studied and are familiar with.
-  * Define postTime (i.e., the date and time of a post) as a `varchar(255)` in the database and as `LocalDateTime` in Java. From database to Java: use `LocalDateTime.parse(String)` to convert a postTime from a string to a `LocalDateTime`. From Java to database: use `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` to convert a postTime from a `LocalDateTime` to a string in the specified format. In addition, use `LocalDateTime.now()` in Java to get the current date and time. 
+  * Define postTime (i.e., the date and time of a post) as a `varchar(255)` in the database and as `LocalDateTime` in Java.
+     * From database to Java: use `LocalDateTime.parse(String)` to convert a postTime from a string to a `LocalDateTime`.
+     * From Java to database: use `postTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")` to convert a postTime from a `LocalDateTime` to a string in the specified format.
+     * In addition, use `LocalDateTime.now()` in Java to get the current date and time. 
   * If necessary,  use the more flexible `on` clause for a join select statement. For example, `Table1 natural inner join Table2` is equivalent to `Table1 inner join Table2 on Table1.col=Table2.col` if they have a common column `col`. The `on` clause is more flexible because it can join two tables on columns with different  names or only some common columns.
 
 ### 4.2 Java Code Design
@@ -152,7 +155,7 @@ Write your Java program to correctly show the necessary information in each wind
 
 You will write all the code from scratch. Define appropriate Java classes, such as 
 * `Main.java` as the main class for ease of execution by LAs
-* `Database.java` containing database connection details as `public final static String` for easy debugging and modification by LAs.
+* `Database.java` containing database connection parameters for easy debugging and modification by LAs.
 
 ```Java
 public class Database {
@@ -167,10 +170,18 @@ public class Database {
 }
 ```
 
-***Recommendation***
-  * Add comprehensive comments for clarity
-  * Adhere to good coding practices
-  
+Follow the following steps to install a JDBC driver to your project
+  * Download the driver at https://dev.mysql.com/downloads/connector/j/
+    * Select an `Operating System`, like `Platform Independent`
+    * Download the tar or zip file, and open it
+  * Add mysql-connector-j-x.x.x.jar to your project
+    * Right-click the project, select `New`, select `Folder`, name it `lib`
+    * Copy mysql-connector-j-x.x.x.jar to the `lib` file folder
+    * Right-click the project, select `Refresh`
+    * Right-click the mysql-connector-j-x.x.x.jar file in the `lib` folder of the project, select "Build Path" then "Add to Build Path."
+
+
+
 
 ## 5. Grading and Submitting Your Project
 
