@@ -178,7 +178,7 @@ Follow the following steps to install a JDBC driver to your project
     * Right-click the project, select `New`, select `Folder`, name it `lib`
     * Copy mysql-connector-j-x.x.x.jar to the `lib` file folder
     * Right-click the project, select `Refresh`
-    * Right-click the mysql-connector-j-x.x.x.jar file in the `lib` folder of the project, select "Build Path" then "Add to Build Path."
+    * Right-click the mysql-connector-j-x.x.x.jar file in the `lib` folder of the project, select `Build Path` then `Add to Build Path`
 
 
 
@@ -265,6 +265,8 @@ submit your project on Canvas.
   * Like Posts (Bonus 20 points):  Enable users to like and unlike posts visible to them. The like information should be visible to all users who can view the post. Design a new table or add a new attribute to existing tables, ensuring continued adherence to 3NF.
 
   * Admin Accounts (Bonus 10 points): There are two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
+
+  * LaTex Report (Bonus 2 points): Write the design document in LaTex (e.g., using www.overleaf.com), which is a typesetting system widely used for creating beautifully formatted documents, especially those containing complex elements like mathematical formulas, tables, and bibliographies. 
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
 
@@ -273,4 +275,4 @@ Your design document should describe each bonus feature that you have implemente
 
 ## Credit
 
-This project was originally designed by Jianghao Wang. Both David Ryckman and Olwen Nguyen helped to revise and improve it. 
+This project was originally designed by Jianghao Wang. David Ryckman, Olwen Nguyen, and Amy Nguyen, helped to revise and improve it. 
