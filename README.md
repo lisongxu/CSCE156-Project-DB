@@ -217,7 +217,7 @@ Submit the following to Canvas. Our LAs will manually grade them.
    
 
 Again, if you plan to work with one other student on this project, please sign
-up for a group on Canvas (`People`, then `Groups`, and then join a group for Project 2), and only one group member needs to
+up for a group on Canvas (`People`, then `Groups`, and then join a group for `Project 2`), and only one group member needs to
 submit your project on Canvas.
 
 ### 5.2 Grading by LAs
@@ -246,7 +246,7 @@ submit your project on Canvas.
 
 #### 5.2.2. MySQL and Java Code (65 points): 
 
-  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, `design.pdf`, and your MySQL username and password.
+  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, `design.pdf`, and your MySQL username and password. You will lose these points if the LA has to contact you for missing files. 
 
   * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
   
