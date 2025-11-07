@@ -19,14 +19,14 @@ After completing this lab, you should be able to:
 ### Peer Programming Pair-Up
 
 At the beginning of each project, you may find a team member on your own.  Please ***sign
-up for a group on Canvas*** (`People`, then `Groups`, and then join a group for Project 2), and only one group member needs to
+up for a group on Canvas*** (`People`, then `Groups`, and then join a group for `Project 2`), and only one group member needs to
 submit your project on Canvas.  If you prefer to work on this project by yourself, that is fine too.
 
 
 
 ## 1. Relation to Project 1
 
-This project is independent of Project 1, although both projects develop Jstgram. You do not need to reuse your code from Project 1. In fact, it is recommended not to use your Project 1 code due to the significant differences between these two projects.
+This project is independent of Project 1, although both projects develop Jstgram. You do not need to reuse your code from Project 1. In fact, it is recommended not to use your Project 1 code because of the significant differences between these two projects.
 
 
 ## 2. Social Media Application - Jstgram
