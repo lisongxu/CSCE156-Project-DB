@@ -196,29 +196,37 @@ Submit the following to Canvas. Our LAs will manually grade them.
 1. `Project2.jar`: Follow the instructions below to generate a runnable JAR file that the LAs can execute.
    *  Step 1: Run your project at least once (create a `Launch Configuration` for step 4)
    *  Step 2: Right-click your project, and select `Export ...`
-   *  Step 3: In the Java folder, select `Runnable JAR file`
-   *  Step 4: In the `Runnable JAR File Specification`
+   *  Step 3: In the `Java` folder, select `Runnable JAR file`, then click `Next`
+   *  Step 4: In the `Runnable JAR File Specification` dialog
        * select your project in `Launch Configuration`
-       * change file name to `Project2.jar` in `Export destination`
        * select `Package required libraries into generated JAR` for `Library handling`
+       * click the `Browse` button to choose the directory to save your JAR file, and change the filename to `Project2.jar`
        * then click the `Finish` button
    * Type `java -jar Project2.jar` in the command line to test whether your JAR runs correctly. 
 
    ***Note that please do not change your database password, because the LAs will directly execute your JAR file that uses your database username and password***
    
 
-2. `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  
+2. `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  Please include your MySQL password as a comment on the first line of your script. For example: 
+```sql
+-- MySQL password: your_password_here
+```
 
-3. `Project2.zip`: A Zip file of all Java source files that the LAs can execute and check, such as `Main.java`, `Database.java`, and all other Java source files.
+3. `Project2.zip`: Follow the instructions below to generate a ZIP file of all project source files that the LAs can read and check.
+   *  Step 1: Right-click your project, and select `Export ...`
+   *  Step 2: In the `General` folder, select `Archive File`, then click `Next`
+   *  Step 3: In the `Export Archive File` dialog
+       * click the `Select All` button to select all files of your project
+       * ensure `Save in zip format` is selected
+       * click the `Browse` button to choose the directory to save your ZIP file, and change the filename to `Project2.zip`
+       * then click the `Finish` button 
 
 4. `design.pdf`: Design document as described in the next section.
 
-5. Your MySQL username and password: Make sure they are the same as the ones specified in your Database.java
-   
+
 
 Again, if you plan to work with one other student on this project, please sign
-up for a group on Canvas (`People`, then `Groups`, and then join a group for `Project 2`), and only one group member needs to
-submit your project on Canvas.
+up for a group on Canvas (`People`, then `Groups`, and then join a group for `Project 2`), and only one group member needs to submit your project on Canvas.
 
 ### 5.2 Grading by LAs
 
@@ -246,9 +254,9 @@ submit your project on Canvas.
 
 #### 5.2.2. MySQL and Java Code (65 points): 
 
-  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, `design.pdf`, and your MySQL username and password. You will lose these points if the LA has to contact you for missing files. 
+  * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, and `design.pdf`. You will lose these points if the LA has to contact you for missing files. 
 
-  * MySQL Initialization Script (10 points): Successfully create the tables and insert the predefined data into the database.
+  * MySQL Initialization Script (10 points): The first line is your MySQL password, and your script successfully creates the tables and inserts the predefined data into the database.
   
   * Main Window (5 points): Correctly display the current number of users. 
 
@@ -260,8 +268,8 @@ submit your project on Canvas.
 
   * Visibility Window (25 points): Correct visibility list display and functionality for editing the list.
      * 5 points: Correctly display the visibility list of the current user. 
-     * 5 points: Correctly add a user to a visibility list. Note that, only a user already in the database can be added to the visibility list.
-     * 5 points: Correctly delete a user from a visibility list.   Note that, only a user already in the visibility list can be deleted from the visibility list.
+     * 5 points: Correctly add a user to a visibility list. Note that only a user already in the database can be added to the visibility list.
+     * 5 points: Correctly delete a user from a visibility list.   Note that only a user already in the visibility list can be deleted from the visibility list.
      * 10 points: Correctly display new post windows after updating visibility lists. For example, after Alice adds David to Alice's visibility list, David can see Alice's posts in David's post window. 
 
 #### 5.2.3. Bonus Features (Additional points)
