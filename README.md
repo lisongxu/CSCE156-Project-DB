@@ -207,7 +207,7 @@ Submit the following to Canvas. Our LAs will manually grade them.
    ***Note that please do not change your database password, because the LAs will directly execute your JAR file that uses your database username and password***
    
 
-2. `dbinit.sql` - the MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  Please include your MySQL password as a comment on the first line of your script. For example: 
+2. `dbinit.sql`: The MySQL initialization script. The LAs will run it to initialize your database before running your JAR file.  Please include your MySQL password as a comment on the first line of your script. For example: 
 ```sql
 -- MySQL password: your_password_here
 ```
