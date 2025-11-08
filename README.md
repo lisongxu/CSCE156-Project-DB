@@ -155,7 +155,7 @@ Write your Java program to correctly show the necessary information in each wind
 
 You will write all the code from scratch. You are recommended to follow the JDBC lecture slides to define appropriate Java classes, such as 
 * `Main.java` as the main class for ease of execution by LAs
-* `Database.java` containing database connection parameters for easy debugging and modification by LAs.
+* `Database.java` containing database connection parameters as shown below for easy debugging and modification by LAs.
 * Two classes (one for data and the other for database access) for each table. For example, `Post.java` and `PostDAO.java` for the Post table. 
 * Two classes (one for query result and the other for database access) for each complex query.
 * `View.java` for interacting with the users 
