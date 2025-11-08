@@ -256,7 +256,9 @@ up for a group on Canvas (`People`, then `Groups`, and then join a group for `Pr
 
   * Submission (5 points): Submitted all required files: `Project2.jar`, `dbinit.sql`, `Project2.zip`, and `design.pdf`. You will lose these points if the LA has to contact you for missing files. 
 
-  * MySQL Initialization Script (10 points): The first line is your MySQL password, and your script successfully creates the tables and inserts the predefined data into the database.
+  * MySQL Initialization Script (10 points): Successfully creates the tables and inserts the predefined data into the database.
+    * 3 points: The first line is your MySQL password.
+    * 7 points: Your script successfully creates the tables and inserts the predefined data into the database.
   
   * Main Window (5 points): Correctly display the current number of users. 
 
@@ -286,7 +288,7 @@ up for a group on Canvas (`People`, then `Groups`, and then join a group for `Pr
 
   * Admin Accounts (Bonus 10 points): There are two types of users: normal users and admin users. A user is a normal user by default. An admin user can access the *Admin Window*, where the admin user can specify new admin users, create new user accounts, delete any existing accounts, view all posts in the database, and sort the posts in different orderings mentioned above as well as by the number of likes of a post. In our example, make David an admin user.
 
-  * LaTex Report (Bonus 2 points): Write the design document in LaTex (e.g., using www.overleaf.com), which is a typesetting system widely used for creating beautifully formatted documents, especially those containing complex elements like mathematical formulas, tables, and bibliographies. Please submit all your LaTex source files in the Project2.zip file. 
+  * LaTex Report (Bonus 5 points): Write the design document in LaTex (e.g., using www.overleaf.com), which is a typesetting system widely used for creating beautifully formatted documents, especially those containing complex elements like mathematical formulas, tables, and bibliographies. Please submit all your LaTex source files in the Project2.zip file. 
   
 You are encouraged to demonstrate the functionality of your Jstgram, particularly the bonus features, to our LAs for feedback and assessment.
 
