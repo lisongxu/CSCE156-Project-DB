@@ -61,7 +61,7 @@ Your MySQL initialization script must add the following information to the datab
 
 A user can manage who sees the user's posts by setting a visibility list. A post is visible to those included in this list, as well as to the user who made the post. 
 
-Your MySQL initialization script should add the following visibility lists to the database before Jstgram starts.
+Your MySQL initialization script must add the following visibility lists to the database before Jstgram starts.
   * The visibility list of Alice contains Bob and Crystal. That is, Alice's posts are visible to Bob, Crystal, and Alice.
   * The visibility list of Bob contains Alice and Crystal.
   * The visibility list of Crystal contains Alice.
