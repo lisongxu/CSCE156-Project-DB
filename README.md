@@ -50,12 +50,12 @@ Your MySQL initialization script should add the following information to the dat
 
 To simplify the project, your application only needs to support the text posts. That is, users can publish text posts only (no text art posts as in Project 1).
 
-Your MySQL initialization script should add the following information to the database before Jstgram starts.
-  * Alice posted "When's the project due?" at 19:00:00 on November 20, 2024
-  * Bob posted "After Thanksgiving" at 19:01:00 on November 20, 2024
-  * David posted "Great job, me" at 09:00:00 on November 21, 2024
-  * Alice posted "Lab this week?" at 10:30:00 on November 25, 2024
-  * Crystal posted "Nope" at 10:35:00 on November 25, 2024
+Your MySQL initialization script must add the following information to the database before Jstgram starts.
+  * Alice posted "When's the project due?" at 13:20:00 on November 20, 2025
+  * Bob posted "After Thanksgiving" at 13:20:30 on November 20, 2025
+  * David posted "Great job, me" at 15:22:00 on November 22, 2025
+  * Alice posted "Lab this week?" at 17:24:00 on November 24, 2025
+  * Crystal posted "Nope" at 17:24:30 on November 24, 2025
 
 ### 2.4 Post Visibility
 
