@@ -153,7 +153,7 @@ You will write the MySQL initialization script from scratch. Name it `dbinit.sql
 
 Write your Java program to correctly show the necessary information in each window (e.g., list of posts in the *Post Window*). The exact format of the windows can differ from the provided screenshots.
 
-You will write all the code from scratch. You are recommended to follow the JDBC lecture slides and the [JDBC project example](https://canvas.unl.edu/courses/200889/files/23040182?wrap=1) that we studied in the class to define appropriate Java classes, such as 
+You will write all the code from scratch. You are recommended to follow the [JDBC lecture slides](https://canvas.unl.edu/courses/200889/files/23044538?wrap=1) and the [JDBC project example](https://canvas.unl.edu/courses/200889/files/23040182?wrap=1) that we studied in the class to define appropriate Java classes, such as 
 * `Main.java` as the main class for ease of execution by LAs
 * `Database.java` containing database connection parameters as shown below for easy debugging and modification by LAs.
 * Two classes (one for data and the other for database access) for each table. For example, `Post.java` and `PostDAO.java` for the Post table. 
